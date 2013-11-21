@@ -4,46 +4,64 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="css/nav.css" rel="stylesheet" media="screen">
   </head>
   
- <body>
-<div class="bs-example">
-      <nav id="navbar-example" class="navbar navbar-default navbar-static" role="navigation">
-        <div class="navbar-header">
-          <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-js-navbar-collapse">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="/">BAYP</a>
+<body>
+
+  <nav id="bayp-navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <!-- Header: everything visible after collapse -->    
+      <div class="navbar-header">
+          <div class='custom-nav'>
+            <div class='custom-nav-toggle-button'>
+              <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".menu-navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+            </div>
+            <div class='custom-nav-brand'>
+              <a class="navbar-brand logo" href="/">BAYP</a>
+            </div>
         </div>
-        <div class="collapse navbar-collapse bs-js-navbar-collapse">
-          <ul class="nav navbar-nav">
-            <li class="dropdown">
-              <a href="about.html" id="about" role="button" class="dropdown-toggle" data-toggle="dropdown"> About</a>
-            </li>
-            <li class="dropdown">
-              <a href="/" id="browse" role="button" class="dropdown-toggle" data-toggle="dropdown">Browse Programs</a>
-            </li>
-            <li class="dropdown">
-              <a href="contact.html" id="contact" role="button" class="dropdown-toggle" data-toggle="dropdown"> Contact</a>
-            </li>
-          </ul>
-          <ul class="nav navbar-nav navbar-right">
-            <li class="dropdown">
-              <a id="search" href="#" role="button" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-search"></span> Search <b class="caret"></b></a>
-            </li>
-            <li id="account_menu" class="dropdown">
-              <a href="#" id="account" role="button" class="dropdown-toggle" data-toggle="dropdown"><span class='glyphicon glyphicon-user'></span> Account <b class="caret"></b></a>
-              <ul class="dropdown-menu" role="menu" aria-labelledby="account">
-                <li role="presentation"><a role="menuitem" tabindex="-1" href="settings.html"><span class="glyphicon glyphicon-cog"></span> Settings</a></li>
-                <li role="presentation"><a role="menuitem" tabindex="-1" href="saved.html"><span class="glyphicon glyphicon-bookmark"></span> Saved Programs</a></li>
-                <li role="presentation" class="divider"></li>
-                <li role="presentation"><a role="menuitem" tabindex="-1" href="http://twitter.com/fat"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
-              </ul>
-            </li>
-          </ul>
-        </div><!-- /.nav-collapse -->
-      </nav> <!-- /navbar-example -->
-    </div> <!-- /example -->
+      </div>
+      <div class="collapse navbar-collapse menu-navbar-collapse">
+        <div class='dropdown-row'>
+          <div class='dropdown-left'>
+            <ul class='nav navbar-nav'>
+              <li><a href="/">Home</a></li>
+              <li><a href="/about">About</a></li>
+              <li><a href="/categories">Browse Programs</a></li>
+              <li><a href="/contact">Contact</a></li>
+            </ul>
+          </div>
+          <div class='dropdown-right'>
+            <!-- Small Screen -->
+            <ul class="nav navbar-nav navbar-right hidden-lg">
+              <li id="account_menu" class="dropdown">
+                <a href="/account" id="account" role="button" class="dropdown-toggle" data-toggle="dropdown"><span class='glyphicon glyphicon-user'></span> Account </b></a>
+              </li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="/settings"><span class="glyphicon glyphicon-cog"></span> Settings</a></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="/saved"><span class="glyphicon glyphicon-bookmark"></span> Saved Programs</a></li>
+              <li role="presentation" class="divider"></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="/logout"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+            </ul><!-- End Small screen search / account menu -->
+
+            <!-- Large Screen -->
+            <ul class="nav navbar-nav navbar-right hidden-sm hidden-xs">
+              <li id="account_menu" class="dropdown">
+                <a href="/account" id="account" role="button" class="dropdown-toggle" data-toggle="dropdown"><span class='glyphicon glyphicon-user'></span> Account <b class="caret"></b></a>
+                <ul class="dropdown-menu" role="menu" aria-labelledby="account">
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="/settings"><span class="glyphicon glyphicon-cog"></span> Settings</a></li>
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="/saved"><span class="glyphicon glyphicon-bookmark"></span> Saved Programs</a></li>
+                  <li role="presentation" class="divider"></li>
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="/logout"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+                </ul>
+              </li>
+            </ul> <!-- End large screen search / account menu -->
+          </div>
+        </div>
+      </div>
+
+  </nav>

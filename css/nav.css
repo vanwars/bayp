@@ -1,0 +1,74 @@
+body { padding-top: 70px; }
+
+/* All sizes. Extra small devices are default in Bootstrap. */
+#bayp-navbar {
+  padding-left: 16px;
+  border: none;
+}
+
+.navbar-toggle {
+  float: left;
+}
+
+.navbar-header:after {
+  clear: both;
+}
+
+.custom-nav {
+  padding-right: 30px;
+}
+  .custom-nav:after {
+    clear: both;
+  }
+  .custom-nav-toggle-button {
+    width: 16.666666667%;
+  }
+
+  .custom-nav-left {
+    width: 16.66666667%;
+    margin-left: 43%;
+  }
+
+  .custom-nav-right {
+    width: 16.66667%;
+    margin-left: 89%;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+@media (max-width:767px) {
+    .navbar-nav.navbar-collapse {
+        margin-left: 0;
+        margin-right: 0;
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .dropdown-row {
+      clear: both;
+    }
+
+  .dropdown-left {
+    float: left;
+    width: 66.6666%;
+
+  }
+
+  .dropdown-right {
+    width: 33.3333%;
+    margin-left: 66.6666%;
+    padding-right: 30px;
+  }
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: @screen-md-min) {
+
+
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: @screen-lg-min) {
+    .navbar-right {
+    text-align: left;
+  }
+}

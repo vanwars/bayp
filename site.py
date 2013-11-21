@@ -2,13 +2,19 @@ import web
 
 urls = (
     '/', 'index',
+    '/about', 'about',
     '/(js|css|images|fonts)/(.*)', 'static', 
 )
 
 class index:
     def GET(self):
-        render = web.template.render('templates')
+        render = web.template.render('templates/')
         return render.index(render.header(), render.footer())
+
+class about:
+    def GET(self):
+        render = web.template.render('templates/about')
+        return render.about(render.header(), render.footer())
 
 class static:
     def GET(self, media, file):
