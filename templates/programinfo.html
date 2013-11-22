@@ -1,0 +1,154 @@
+$def with (header, footer)
+$:header
+
+<div class="container">
+    <div id="program_media">
+      <ul id="myTab" class="nav nav-tabs">
+        <li class="active"><a href="#photos" data-toggle="tab">Photos</a></li>
+        <li><a href="#map" data-toggle="tab">Map</a></li>
+      </ul>
+    <div class="center-block">
+    <div class="tab-content">
+    
+       <div id="photos" class="tab-pane fade in active">
+		<br>
+        <br>
+      
+	  <h1 class="group inner list-group-item-heading">
+        <a href="/">Program 1</a></h1>
+        <address><strong>Neighborhood: West Oakland<br>1234 Oak Street</strong></address>
+      <img src="http://dummyimage.com/640x4:3/1a75d6/ffffff.jpg" class="img-responsive" alt="Responsive image">
+      <div class="row">
+      <div class="col-xs-2">
+        <div class="thumbnail">
+          <img src="http://dummyimage.com/64/64/fff.jpg" alt="My Image" />
+        </div>
+      </div>
+
+      <div class="col-xs-2">
+        <div class="thumbnail">
+          <img src="http://dummyimage.com/64/64/fff.jpg" alt="My Image" />
+       </div>
+      </div>
+
+      <div class="col-xs-2">
+        <div class="thumbnail">
+          <img src="http://dummyimage.com/64/64/fff.jpg" alt="My Image" />
+        </div>
+      </div>
+    </div><!-- End Row Div --> 
+
+
+   		 </div><!-- /photos -->
+         <div id="map" class="tab-pane fade">
+         <br>
+        <br>
+<div class="row">
+	
+    <div class="col-xs-12 col-md-8">
+    <h1 class="group inner list-group-item-heading">
+        <a href="/">Program 1</a></h1>
+        <address><strong>Neighborhood: West Oakland<br>1234 Oak Street</strong></address>
+    <img src="/images/map_1.png" class="img-responsive" alt="Responsive image">
+	</div>
+    
+	<div class="col-xs-12 col-md-4">
+    <h3>Directions</h3>
+    
+<form role="form">
+    <fieldset>
+        <div class="form-group">
+        <label class="sr-only" for="directions">Street Address</label>
+            <input type="text" id="directions_start" class="form-control" placeholder="Street Adress" >
+        </div>
+        
+        <div class="form-group">
+        <label class="sr-only" for="directions">Destination</label>
+            <input type="text" id="directions_end" class="form-control" placeholder="1234 Oak Street" >
+		</div>
+
+    <div class="form-group">
+	<button id="directions" type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-search"></span> GO</button>
+    </div>
+    
+    </fieldset>
+
+</form>
+
+        </div><!-- /map -->
+        
+        </div><!-- /tab content -->
+        </div><!-- centered media -->    
+    </div><!-- /program_media -->
+
+
+<div style="border-bottom: groove 1px; margin: 25px 0px;"></div> <!-- separate content with hairline rule -->
+
+<div class="row">
+<div class="col-xs-12 col-md-8">
+  <h3 class="group inner list-group-item-heading">
+        <a href="/">Custom Headline for Program 1</a></h3>
+        <address><strong>Neighborhood: West Oakland<br>1234 Oak Street</strong></address>
+    	
+        <ul class="list-inline">
+          <li><a href="programinfo.html"><span class="glyphicon glyphicon-usd"></span> Price: </a></li>
+          <li><a href="/"><span class="glyphicon glyphicon-bookmark"></span> Save Program</a><li>
+        </ul>
+        
+        <span class="glyphicon glyphicon-thumbs-up"><small> 43 Recommend This</small></span>
+        <br>
+        <br>
+        
+   	<p class="lead">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum lacus risus, ultrices vel vulputate sed, ultrices id velit. Nullam at hendrerit lectus. </p>
+	<p class="group inner list-group-item-text"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum lacus risus, ultrices vel vulputate sed, ultrices id velit. Nullam at hendrerit lectus. Morbi tincidunt vel lorem vitae convallis. Duis eu dui vitae nunc laoreet tincidunt in id massa. Ut varius vitae ante id dictum. Ut ultrices nunc ac orci malesuada, venenatis mattis dui tempor.</p>
+
+<div style="border-bottom: groove 1px; margin: 25px 0px;"></div> <!-- separate content with hairline rule -->
+
+
+</div><!-- wider column for program description-->  
+
+
+<div class="col-xs-12 col-md-4">
+<div class="media">
+  	<a class="pull-left" href="#">
+    <img src="/images/staff.jpg" class="media-object" alt="staff">
+  	</a>
+		<div class="media-body">
+    <h4 class="media-heading">Kevin Knight<br>Program Coordinator</h4>
+    <p>(415) 555 - 5555</p>
+    </div><!--media body-->
+    <a href="#"><strong> View Programs Posted by Kevin</strong></a>
+
+</div><!--media--> 
+<div style="border-bottom: groove 1px; margin: 25px 0px;"></div> <!-- separate content with hairline rule -->
+<div id="select_session">
+<h4> Interested? Select sessions </h4>
+<div class="checkbox">
+  <label>
+  <input type="checkbox" value="">
+   Course A: Session 1 Fridays, 4PM, September 6 - Dec 17
+ </label>
+ </div><!--checkbox 1-->
+ <div class="checkbox">
+ <label>
+ <input type="checkbox" value="">
+   Course B: Session 2 Wednesdays, 4PM, ongoing
+  </label>
+   </div><!--checkbox 2-->
+<br>
+<br>
+<p>
+ <button type="button" class="btn btn-primary">Send Me This Info</button>
+</p>
+</div><!-- /select_session -->
+</div><!--/right minor column -->
+</div><!--/row-->
+ 
+
+
+
+</div><!--container-->
+
+
+$:footer
