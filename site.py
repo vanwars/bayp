@@ -5,6 +5,7 @@ urls = (
     '/categories', 'categories',
     '/programinfo', 'programinfo',
     '/listview', 'listview',
+    '/about', 'about',
     '/(js|css|images|fonts)/(.*)', 'static' 
 )
 
@@ -27,6 +28,11 @@ class listview:
     def GET(self):
         render = web.template.render('templates')
         return render.listview(render.header(), render.footer())
+
+class about:
+    def GET(self):
+        render = web.template.render('templates/about')
+        return render.about(render.header(), render.footer())
 
 class static:
     def GET(self, media, file):
