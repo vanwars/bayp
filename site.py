@@ -1,5 +1,4 @@
 import web
-import web.webopenid
 import program_reader
 from whoosh.qparser import QueryParser
 

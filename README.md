@@ -2,6 +2,14 @@ bayp
 ====
 UPDATES as of 11-20-2013
 
+REQUIREMENTS TO RUN:
+----------------------
+
+Install these python packages:
+web
+whoosh
+
+
 landing (index)
 ---------------
 - search bar added
