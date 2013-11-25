@@ -1,5 +1,7 @@
 import web
+import web.webopenid
 import program_reader
+from whoosh.qparser import QueryParser
 
 urls = (
     '/', 'index', 
@@ -7,11 +9,14 @@ urls = (
     '/programinfo', 'programinfo',
     '/listview', 'listview',
     '/listviewreal', 'listviewreal',
+    '/listviewsearched', 'listviewsearched',
     '/about', 'about',
-    '/(js|css|images|fonts)/(.*)', 'static' 
+    '/(js|css|images|fonts)/(.*)', 'static',
 )
 
 programs = program_reader.read_programs("programs.json")
+search_index = program_reader.whoosh_descriptions(programs)
+
 
 class index:
     def GET(self):
@@ -37,6 +42,17 @@ class listviewreal:
     def GET(self):
         render = web.template.render('templates')
         return render.listview_real(render.header(), render.footer(), programs)
+        
+class listviewsearched:
+    def GET(self):
+        render = web.template.render('templates')
+        query = QueryParser("short_desc", search_index.schema).parse(unicode(web.input()['q']))
+        results = None
+        
+        with search_index.searcher() as searcher:
+            results = searcher.search(query)
+            print results    
+            return render.listview_real(render.header(), render.footer(), results)
 
 class about:
     def GET(self):
