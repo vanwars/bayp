@@ -18,7 +18,5 @@
 
 /* Large devices (large desktops, 1200px and up) */
 @media (min-width: @screen-lg-min) {
-    .navbar-right {
-    text-align: left;
-  }
+	
 }
