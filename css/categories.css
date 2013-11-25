@@ -1,0 +1,24 @@
+.search-btn {
+  padding-top: 47px;
+  padding-left: 0;
+}
+
+@media (min-width: 454px) {
+  .search-btn {
+  padding-top: 28px;
+  padding-left: 0;
+
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: @screen-md-min) {
+
+
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: @screen-lg-min) {
+    .navbar-right {
+    text-align: left;
+  }
+}
