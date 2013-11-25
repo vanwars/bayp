@@ -1,13 +1,17 @@
 import web
+import program_reader
 
 urls = (
     '/', 'index', 
     '/categories', 'categories',
     '/programinfo', 'programinfo',
     '/listview', 'listview',
+    '/listviewreal', 'listviewreal',
     '/about', 'about',
     '/(js|css|images|fonts)/(.*)', 'static' 
 )
+
+programs = program_reader.read_programs("programs.json")
 
 class index:
     def GET(self):
@@ -28,6 +32,11 @@ class listview:
     def GET(self):
         render = web.template.render('templates')
         return render.listview(render.header(), render.footer())
+
+class listviewreal:
+    def GET(self):
+        render = web.template.render('templates')
+        return render.listview_real(render.header(), render.footer(), programs)
 
 class about:
     def GET(self):
