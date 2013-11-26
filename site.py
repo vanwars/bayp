@@ -7,7 +7,6 @@ urls = (
     '/categories', 'categories',
     '/programinfo', 'programinfo',
     '/listview', 'listview',
-    '/listviewreal', 'listviewreal',
     '/listviewsearched', 'listviewsearched',
     '/about', 'about',
     '/login', 'login',
@@ -29,22 +28,15 @@ class categories:
         render = web.template.render('templates')
         return render.categories(render.header(), render.footer())
 
+
 class programinfo:
     def GET(self):
         render = web.template.render('templates')
-        return render.programinfo(render.header(), render.footer())
-
-class listview:
-    def GET(self):
-        render = web.template.render('templates')
-        return render.listview(render.header(), render.footer())
-
-class listviewreal:
-    def GET(self):
-        render = web.template.render('templates')
-        return render.listview_real(render.header(), render.footer(), programs)
+        if web.input()['ind']:
+            ind = int(web.input()['ind'])
+            return render.programinfo(render.header(), render.footer(), programs[ind])
         
-class listviewsearched:
+class listview:
     def GET(self):
         render = web.template.render('templates')
         query = QueryParser("short_desc", search_index.schema).parse(unicode(web.input()['q']))
@@ -53,7 +45,7 @@ class listviewsearched:
         with search_index.searcher() as searcher:
             results = searcher.search(query)
             print results    
-            return render.listview_real(render.header(), render.footer(), results)
+            return render.listview(render.header(), render.footer(), results)
 
 class about:
     def GET(self):
