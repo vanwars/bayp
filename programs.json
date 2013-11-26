@@ -1,7 +1,7 @@
 [
 	{
 		"name": "Youth Radio",
-		"tag": "Cultivating media and minds.",
+		"org": "Youth Radio",
 		"short_desc": "Youth Radio is an award-winning media production company that trains diverse young people in digital media and technology.",
 		"long_desc": "Youth Radio is an award-winning media production company that trains diverse young people in digital media and technology.  Partnering with industry professionals, students learn to produce marketable media for massive audiences while bringing youth perspectives to issues of public concern. \n\n Our mission is to launch young people on career and education pathways by engaging them in work-based learning opportunities, creative expression, professional development, and health and academic support services. \n\n Founded in 1992 in Berkeley during a period of heightened youth violence and homicide, Youth Radio was established as an outlet for Bay Area youth to process their experiences and provide an alternative perspective to the prevailing media dialogue. In 2007, Youth Radio moved its headquarters to downtown Oakland, helping transform an under-invested part of the city into a world-class center of art, commerce, and culture.",
 		"address": "1701 Broadway, Oakland, CA 94612",
@@ -16,6 +16,7 @@
 	},
 	{
 		"name": "Hacker Scouts",
+		"org": "Hacker Scouts",
 		"short_desc": "Hacker Scouts is a national non profit organization, founded in the Fall of 2012 in Oakland CA, that focuses on STEAM (science, technology, engineering, art, and math) education, skill building and community engagement with the aspiration to help our children develop skills in the areas they are truly interested in, abilities that would allow them to dream big and create big.",
 		"address": "6050 Lowell Street, Suite 214, Oakland, CA 94608",
 		"zipcode": 94608,
@@ -25,6 +26,7 @@
 	},
 	{
 		"name": "OSMO",
+		"org": "Oakland Science and Mathematics Outreach",
 		"short_desc": "OSMO is an afterschool program based out of the Boys and Girls Club, supporting middle and high school students in math, science, technology, and digital media.",
 		"long_desc": "OSMO is an afterschool program based out of the Boys and Girls Club, supporting middle and high school students in math, science, technology, and digital media.",
 		"address": "1701 Broadway, Oakland, CA 94612",
@@ -34,7 +36,7 @@
 	},
 	{
 		"name": "SMASH:Prep",
-		"tag": "Math and science for African American males",
+		"org": "Level Playing Field Institute",
 		"short_desc": "SMASH is a rigorous 5-week, 3-year summer STEM enrichment program for underrepresented high school students of color, which provides access to rigorous coursework, college preparation, and access to mentors, role models, and support networks of students of color.",
 		"long_desc": "SMASH: Prep serves African American males who have demonstrated both an aptitude and interest in math and science. Its curriculum is designed for sixth through eighth graders and will increase the participants' college and STEM aspirations. SMASH: Prep is a year-round holistic STEM enrichment program that aims to improve mathematics and science knowledge while developing the scholars' critical thinking skills. SMASH: Prep builds positive scholar identity and provides exposure to role models and experiences that reinforce academic excellence. The program is free of cost.",
 		"address": "2781 Telegraph Ave, Oakland, CA 94612",
@@ -44,6 +46,7 @@
 	},
 	{
 		"name": "Youth UpRising",
+		"org": "Youth UpRising",
 		"short_desc": "Youth UpRising (YU) is a 25,000 sq. ft., state-of-the-art transformation center in the heart of East Oakland dedicated to community transformation powered by the leadership of youth.",
 		"long_desc": "SMASH: Prep serves African American males who have demonstrated both an aptitude and interest in math and science. Its curriculum is designed for sixth through eighth graders and will increase the participants' college and STEM aspirations. SMASH: Prep is a year-round holistic STEM enrichment program that aims to improve mathematics and science knowledge while developing the scholars' critical thinking skills. SMASH: Prep builds positive scholar identity and provides exposure to role models and experiences that reinforce academic excellence. The program is free of cost.",
 		"address": "2781 Telegraph Ave, Oakland, CA 94612",
@@ -53,6 +56,7 @@
 	},
 	{
 		"name": "Black Girls Code",
+		"org": "Black Girls Code",
 		"short_desc": "The nonprofit, founded by Kimberly Bryant, aims to give girls access to good-paying professions with prestigious companies, as well as the ability to enter into the field as an entrepreneurs and leaders of technology.",
 		"zipcode": 94612,
 		"cost": 0,
@@ -60,16 +64,17 @@
 	},
 	{
 		"name": "Hidden Genius Project",
-		"tag": "Create, explore, design.",
+		"org": "Hidden Genius Project",
 		"short_desc": "The Hidden Genius Project (THGP) is an Oakland, CA based non-profit that provides black male youths with the knowledge, skills, mentors and experiences to obtain and create technological jobs in this new, global, 21st century economy.",
 		"long_desc": "The Hidden Genius Project (THGP) is an Oakland, CA based non-profit that provides black male youths with the knowledge, skills, mentors and experiences to obtain and create technological jobs in this new, global, 21st century economy. We are focused on unlocking career paths in Software Engineering, User Experience Design and Technology Entrepreneurship. \n\n The Hidden Genius Project is a two-year program starting off with an intensive 8-week Summer Program.",
-	  "address": "Laney College Technology Center, 900 Fallon St, Oakland, CA 94607",
+	  	"address": "Laney College Technology Center, 900 Fallon St, Oakland, CA 94607",
 		"zipcode": 94607,
 		"cost": 0,
 		"categories": "Tech"
 	},
 	{
 		"name": "Digital Connectors",
+		"org": "One Economy Corporation",
 		"short_desc": "Digital Connectors program identifies talented young people, immersed them in technology training, and helped them build their leadership and workplace skills to enter the 21st century economy.",
 		"zipcode": 94607,
 		"cost": 0,
@@ -77,10 +82,147 @@
 
 	},
 	{
-		"name": "Exploratorium High School Explainer Program",
+		"name": "High School Explainer Program",
+		"org": "Exploratorium",
 		"short_desc": "The High School Explainers Program, high school students explain exhibits at the San Francisco Exploratorium to the public and conduct the various science demonstrations for the public.",
 		"zipcode": 94607,
 		"cost": 0,
 		"categories": "Tech"
+	},
+	{
+		"name": "Clothing Giveaway",
+		"org": "Clothing Closet",
+		"short_desc": "St. Vincent de Paul of Alameda County's Clothing Closet provides clothing to those in need.  Be a shopping partner! Help people pick out appropriate clothing and match items for fun, complete outfits.",
+		"zipcode": 94612,
+		"cost": 0,
+		"categories": "Community Service"
+	},
+	{
+		"name": "Spanish Language Tutor",
+		"org": "Livermore American Indian Center",
+		"short_desc": "Livermore American Indian Center is looking for someone who can tutor Spanish for a 9th grade high school student in the Livermore area. This would be a good opportunity for someone to share their Spanish language background.",
+		"zipcode": 94612,
+		"cost": 0,
+		"categories": "Community Service"
+	},
+	{
+		"name": "Nursery Propagators Needed at The Ruth Bancroft Garden!",
+		"org": "The Ruth Bancroft Garden",
+		"short_desc": "Work in a beautiful outdoor setting with a great team of plant-loving people! Ruth Bancroft Garden Nursery Volunteers make a valuable contribution to the Garden by helping grow and maintain our collection of drought-tolerant plants.",
+		"zipcode": 94612,
+		"cost": 0,
+		"categories": "Community Service"
+	},
+	{
+		"name": "Love Children? Want to Read and make an Art Project?",
+		"org": "Jumpstart",
+		"short_desc": "Jumpstart will be partnering up with community based organizations (CBO) to bring children in Oakland an interactive reading and art project. Let's work together and make the holiday's extra special for the children!",
+		"zipcode": 94612,
+		"cost": 0,
+		"categories": "Community Service"
+	},
+	{
+		"name": "Community Service Hours",
+		"org": "Uhuru Furniture & Collectibles",
+		"short_desc": "Uhuru Furniture & Collectibles has ongoing volunteer opportunities DAILY. So if you have school program or court-ordered community service hours, or you simply want to help advance a great cause, call us!",
+		"long_desc": "Uhuru Furniture & Collectibles is a fundraiser for the African People's Education and Defense Fund (APEDF). APEDF strives to develop and institutionalize programs to defend the human and civil rights of the African community and the address the grave disparities in education, health, health care and economic development of the African community.",
+		"address": "3742 Grand Ave, Oakland, CA 94610",
+		"zipcode": 94610,
+		"cost": 0,
+		"categories": "Community Service",
+		"website": "http://www.apedf.org",
+		"contact_person": "John Doe",
+		"contact_title": "Program Director",
+		"contact_phone": "(555) 555-5555",
+		"contact_email": "JohnDoe@apedf.org"
+	},
+	{
+		"name": "Serve meals a day in our dining room - Fight hunger in Oakland",
+		"org": "St. Vincent de Paul Free Dining Room",
+		"short_desc": "The St. Vincent de Paul Free Dining Room serves a hot, healthy meal Tuesday-Saturday.  One time and ongoing volunteers are welcome! Our Free Dining Room, located in Downtown Oakland, is in one of the most distressed neighborhoods in Northern California.",
+		"long_desc": "Our Free Dining Room, located in Downtown Oakland, is in one of the most distressed neighborhoods in Northern California. We rely on 2,000 people who volunteer more than 50,000 hours annually to feed the hungry. It is also home to our culinary training program, Kitchen of Champions. This program focuses on helping our students prepare for fair-wage positions. Join our team of 20+ volunteers each day! Individuals, groups, families, teens (14-year-old and up), and seniors are all welcome.",
+		"address": "2272 San Pablo Ave, Oakland, CA 94612",
+		"zipcode": 94612,
+		"cost": 0,
+		"categories": "Community Service",
+		"website": "http://www.svdp-alameda.org/get-involved/volunteer.html",
+		"contact_person": "Rosa Baeza",
+		"contact_title": "Community Engagement Manager",
+		"contact_phone": "(510) 877-9252",
+		"contact_email": "RosaB@svdp.org"
+	},
+	{
+		"name": "Help make learning fun! Tutor and Mentor West Oakland Youth!",
+		"org": "Boost! West Oakland",
+		"short_desc": "At Lafayette Elementary School, kids WANT to be tutored and look forward each week to that special one-on-one time. Each tutor is provided with ongoing training and support to implement individualized teaching strategies for their student.",
+		"long_desc": "At Lafayette Elementary School, kids WANT to be tutored and look forward each week to that special one-on-one time. Each tutor is provided with ongoing training and support to implement individualized teaching strategies for their student. Tutors have the opportunity to attend monthly no-cost field trips with their students thereby extending learning beyond the classroom and developing a mentoring relationship. To join our wonderful team of volunteers, you will need to complete an application (www.boostoakland.org) and attend a two-part training which will include finger printing/background check. Upcoming trainings will be held in November and January. Contact us for more details.",
+		"address": "1700 Market Street, Oakland, CA 94607",
+		"zipcode": 94607,
+		"cost": 0,
+		"categories": "Community Service",
+		"website": "http://www.boostoakland.org",
+		"contact_person": "Jessica Bilsky",
+		"contact_title": "Community Engagement Manager",
+		"contact_phone": "(510) 877-9252",
+		"contact_email": "JessicaB@boostoakland.org"
+	},
+	{
+		"name": "Love Children? Want to Read and make an Art Project?",
+		"org": "Jumpstart",
+		"short_desc": "Jumpstart will be partnering up with community based organizations (CBO) to bring children in Oakland an interactive reading and art project. Let's work together and make the holiday's extra special for the children!",
+		"zipcode": 94612,
+		"cost": 0,
+		"categories": "Arts"
+	},
+	{
+		"name": "Performing arts and new media classes",
+		"org": "East Bay Center for the Performing Arts",
+		"short_desc": "The East Bay Center for the Performing Arts has brought performing arts and new media classes to after-school programs.  We are drawing on the Center's diverse resources; our professional arts faculty and experienced educational staff; our multi-cultural offerings, both traditional and contemporary; and partnerships with other arts and social organizations.",
+		"zipcode": 94612,
+		"cost": 0,
+		"categories": "Arts"
+	},
+	{
+		"name": "Fire it up: Crucible Youth Programs",
+		"org": "The Crucible",
+		"short_desc": "“Bye, Mom, I’m off to blacksmithing class.” It’s music to any sculpture-aficionado parent’s ear—and it’s for real. This West Oakland industrial fire arts facility has long been a mecca for makers. It’s where you go to play with fire, er, study techniques in neon, glass, and welding.",
+		"zipcode": 94612,
+		"cost": 0,
+		"categories": "Arts"
+	},
+	{
+		"name": "Hands-on arts: After School Art + Science",
+		"org": "Junior Center of Art and Science",
+		"short_desc": "This long-running program teaches after-school visual arts, carpentry, clay, and more for tots through teens, right on the shores of Lake Merritt. The facility is a venture of the Junior League, Oakland’s Office of Parks and Recreation, and other groups.",
+		"zipcode": 94612,
+		"cost": 0,
+		"categories": "Arts"
+	},
+	{
+		"name": "Claytime: Children’s & Teens’ Wet Clay Classes",
+		"org": "Kids ’N’ Clay",
+		"short_desc": "From the very basics—infant footprint tiles—to technique-intensive skills like wheel-throwing, this lively studio stresses personal development, creative problem-solving skills, and fun. Not to mention Kids ’N’ Clay teachers theorize that pounding, squishing, rolling, and shaping wet clay go hand in hand with untethered imaginations.",
+		"zipcode": 94612,
+		"cost": 0,
+		"categories": "Arts"
+	},
+	{
+		"name": "Performance power",
+		"org": "Berkeley Repertory School of Theatre",
+		"short_desc": "Professional actors, writers, directors, and technicians offer classes for youth and teens at the Tony Award–winning theater’s downtown Berkeley school. Teens can learn stage fighting, do improv, or pick up expert tips in acting on camera or preparing for an audition.",
+		"zipcode": 94612,
+		"cost": 0,
+		"categories": "Arts"
+	},
+	{
+		"name": "Dance, dance, dance",
+		"org": "Next Step Dance Studio",
+		"short_desc": "Whether your daughter or son wants to do hip-hop, ballet, jazz, or tap moves like Fred Astaire, this school’s three locations offer challenging and recreational classes for all ages and styles of dance. Ultimately, owner Lori Buffalow wants her classes to help kids, from tots to teens, learn to move their bodies in ways that instill them with confidence as dancers—and in life.",
+		"zipcode": 94612,
+		"cost": 0,
+		"categories": "Arts"
 	}
+
+
+
 ]
