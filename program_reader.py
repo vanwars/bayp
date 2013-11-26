@@ -10,12 +10,27 @@ def read_programs(filename):
     return data
     
 def whoosh_descriptions(programs):
-    schema = Schema(name=TEXT(stored=True), index=ID(stored=True), short_desc=TEXT(stored=True, analyzer=(StandardAnalyzer(minsize=2) | NgramFilter(minsize=3))))
+    schema = Schema(name=TEXT(stored=True), \
+                    index=ID(stored=True), \
+                    address=TEXT(stored=True), \
+                    category=TEXT(stored=True), \
+                    zipcode=TEXT(stored=True), \
+                    short_desc=TEXT(stored=True, analyzer=(StandardAnalyzer(minsize=2) | NgramFilter(minsize=3))))
     index = create_in("whooshindex", schema)
     writer = index.writer()
     
     for prog_index in xrange(len(programs)):
-        writer.add_document(name=programs[prog_index]["name"], index=unicode(prog_index), short_desc=programs[prog_index]["short_desc"])
+        program = programs[prog_index]
+        
+        if "address" not in program:
+            program["address"] = u"No address provided."
+        
+        writer.add_document(name=program["name"], \
+                            index=unicode(prog_index), \
+                            address=program["address"], \
+                            category=program["categories"], \
+                            zipcode=unicode(program["zipcode"]), \
+                            short_desc=program["short_desc"])
     writer.commit()
     
     return index

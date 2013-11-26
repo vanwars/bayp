@@ -40,13 +40,23 @@ class programinfo:
 class listview:
     def GET(self):
         render = web.template.render('templates')
-        query = QueryParser("short_desc", search_index.schema).parse(unicode(web.input()['q']))
+        zipcode = unicode(web.input()['zip'])
+        category = unicode(web.input()['cat'])
         results = None
-        
+        backup_results = None
         with search_index.searcher() as searcher:
+            backup_query = QueryParser("category", search_index.schema).parse(category)
+        
+            if category == u"all":
+                category=""
+                backup_query = QueryParser("category", search_index.schema).parse("*")
+
+            backup_results = searcher.search(backup_query)
+                
+            query = QueryParser("category", search_index.schema).parse("zipcode:"+zipcode+" "+category)
             results = searcher.search(query)
-            print results
-            return render.listview(render.header(), render.footer(), results)
+            results.filter(backup_results)
+            return render.listview(render.header(), render.footer(), results, category, zipcode)
 
 class about:
     def GET(self):
