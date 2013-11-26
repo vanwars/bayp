@@ -1,43 +1,47 @@
 $def with (header, footer)
 $:header
- <div class="container-fluid">
-  <div class="container">
-  :before
-  <div class="row">
-  :before
-  <div class="col-xs-6 col-md-4">
-    <a href="#">
-  		<span>ALL</span>
-    </a>
-  </div>
-  <div class="col-xs-6 col-md-4">
-    <a href="#">
-  		<span>ART</span>
-    </a>
-  </div>
-  <div class="col-xs-6 col-md-4">
-    <a href="#">
-  		<span>OUTDOORS</span>
-    </a>
-  </div>
-  <div class="col-xs-6 col-md-4">
-    <a href="#">
-  		<span>SCIENCE/TECH</span>
-    </a>
-  </div>
-  <div class="col-xs-6 col-md-4">
-    <a href="#">
-  		<span>SPORTS</span>
-    </a>
-  </div>
-   <div class="col-xs-6 col-md-4">
-    <a href="#">
-  		<span>COMMUNITY SERVICE</span>
-    </a>
-  </div>
-  
-  </div>
-  </div>
-  </div>
+<div class="container">
+    <div class='row category-search header'>
+        <div class='col-xs-12 col-md-12'>
+            <p class='lead'>Programs in</p>
+            <h1>94607</h1>
+            <p class='lead'>Browse by Category:</p>
+        </div>
+    </div>
+
+
+    <div class='category-search row hidden-xs hidden-sm'>
+      <div class='col-xs-12 col-md-10 col-md-offset-1'>
+        <div class='row category-search categories'>
+          <a class='col-md-3' href='/listview'>All</a>
+          <a class='col-md-3' href='/listview'>Art</a>
+          <a class='col-md-3' href='/listview'>Community Service</a>
+          <a class='col-md-3 right' href='/listview'>Outdoors</a>
+        </div>
+        <div class='row category-search categories'> 
+            <a class='col-md-3' href='/listview'>Science</a>
+            <a class='col-md-3' href='/listview'>Sports</a>
+            <a class='col-md-3' href='/listview'>Technology</a>
+            <a class='col-md-3 right' href='/listview'>Theatre</a>
+        </div>
+      </div>
+    </div>
+
+    <div class='hidden-md hidden-lg'>
+      <div class='row category-search categories'>
+        <a class='col-xs-6' href='/listview'>All</a>
+        <a class='col-xs-6' href='/listview'>Art</a>
+        <a class='col-xs-6' href='/listview'>Community Service</a>
+        <a class='col-xs-6 right' href='/listview'>Outdoors</a>
+      </div>
+      <div class='row category-search categories'> 
+          <a class='col-xs-6' href='/listview'>Science</a>
+          <a class='col-xs-6' href='/listview'>Sports</a>
+          <a class='col-xs-6' href='/listview'>Technology</a>
+          <a class='col-xs-6 right' href='/listview'>Theatre</a>
+      </div>
+    </div>
+
+</div>
 
 $:footer

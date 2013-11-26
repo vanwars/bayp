@@ -1,8 +1,8 @@
-body { padding-top: 70px; }
+/*body { padding-top: 70px; }*/
 
 /* All sizes. Extra small devices are default in Bootstrap. */
 #bayp-navbar {
-  padding-left: 16px;
+  padding-left: 13px;
   border: none;
 }
 
