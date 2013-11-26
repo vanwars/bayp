@@ -10,6 +10,8 @@ urls = (
     '/listviewreal', 'listviewreal',
     '/listviewsearched', 'listviewsearched',
     '/about', 'about',
+    '/login', 'login',
+    '/profile', 'profile',
     '/(js|css|images|fonts)/(.*)', 'static',
 )
 
@@ -55,8 +57,18 @@ class listviewsearched:
 
 class about:
     def GET(self):
-        render = web.template.render('templates/about')
+        render = web.template.render('templates')
         return render.about(render.header(), render.footer())
+
+class login:
+    def GET(self):
+        render = web.template.render('templates')
+        return render.login(render.header(), render.footer())
+
+class profile:
+    def GET(self):
+        render = web.template.render('templates')
+        return render.profile(render.header(), render.footer())     
 
 class static:
     def GET(self, media, file):

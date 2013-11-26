@@ -1,0 +1,35 @@
+$def with (header, footer)
+$:header
+
+<div class="container col-md-10 col-md-offset-1">
+    <div class='row'>
+        <div class='col-xs-12 col-md-12'>
+            <h1>Log in to BAY-P</h1>
+        </div>
+    </div>
+
+    <form class='form-inline' role="form" id='login'>
+        <fieldset>
+            <div class='row username'>
+                <div class="form-group col-xs-12 col-md-10 username">
+                    <label for="username">Username: </label>
+                    <input type="text" id="username" class="form-control" placeholder="i.e., anderson_j" >
+                </div>
+            </div>
+            <div class='row password'>
+                <div class="form-group col-xs-10 col-md-9">
+                    <label for="username">Password: </label>
+                    <input type="password" id="password" class="form-control" >
+                </div> 
+                <div class='form-group col-xs-2 col-md-2' id='login-btn'>
+                    <button type="submit" class="btn btn-primary btn-sm"><span class="glyphicon glyphicon-log-in"></span> Log In</button>
+                </div>
+            </div>
+            
+        </fieldset>
+    </form>
+</div><!-- /.container -->
+
+$:footer
+
+
