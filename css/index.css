@@ -1,9 +1,13 @@
 .container .jumbotron {
 	background-image: url('/images/bayp_main.jpg');
-	background-repeat: none;
+	background-repeat: no-repeat;
+	background-color: transparent;
 	border-radius: 1px;
 }
 
+.container .jumbotron .label {
+	font-size: 10px;
+}
 
 .form-group {
 	margin-bottom: 0;
@@ -30,8 +34,10 @@
 /* No media query since this is the default in Bootstrap */
 
 /* Small devices (tablets, 768px and up) */
-@media (min-width: @screen-sm-min) { 
-
+@media (min-width: 768px) { 
+	.container .jumbotron .label {
+		font-size: 24.5px;
+	}
 }
 
 /* Medium devices (desktops, 992px and up) */

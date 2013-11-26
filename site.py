@@ -11,6 +11,7 @@ urls = (
     '/contact', 'contact',
     '/login', 'login',
     '/profile', 'profile',
+    '/saved', 'saved',
     '/(js|css|images|fonts)/(.*)', 'static',
 )
 
@@ -65,7 +66,18 @@ class login:
 class profile:
     def GET(self):
         render = web.template.render('templates')
-        return render.profile(render.header(), render.footer())     
+        return render.profile(render.header(), render.footer())  
+
+class saved:
+    def GET(self):
+        render = web.template.render('templates')
+        saved = programs[0:3]
+        i = 1
+        for key in saved:
+            key['index'] = i
+            i += 1
+        print saved
+        return render.saved(render.header(), render.footer(), saved)    
 
 class static:
     def GET(self, media, file):
@@ -73,7 +85,7 @@ class static:
             f = open(media+'/'+file, 'r')
             return f.read()
         except:
-            return '' # you can send an 404 error here if you want
+            return '' # you can send a 404 error here if you want
 
 if __name__ == "__main__":
     app = web.application(urls, globals())
