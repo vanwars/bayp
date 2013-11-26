@@ -1,3 +1,9 @@
+.container .jumbotron {
+	background-image: url('/images/bayp_main.jpg');
+	background-repeat: none;
+	border-radius: 1px;
+}
+
 
 .form-group {
 	margin-bottom: 0;

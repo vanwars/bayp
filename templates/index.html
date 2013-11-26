@@ -2,44 +2,44 @@ $def with (header, footer)
 $:header
 
 <div class="container col-md-10 col-md-offset-1">
-    <div class='row'>
-        <div class='col-xs-12 col-md-12'>
-            <h1>BAY-P</h1>
-            <p class="lead">Connecting Bay Area youth with after school programs.</p>
-        	<p style="margin-top: 40px; margin-bottom: 40px;">Graphics TK</p>
+    <div class="jumbotron">    
+        <div class='row'>
+            <div class='col-xs-12 col-md-12'>
+                <h1>BAY-P</h1>
+                <p class="lead">Connecting Bay Area youth with after school programs.</p>
+            </div>
         </div>
-    </div>
+        <form class='form-inline' role="form" action="/listviewsearched" method='get'>
+            <fieldset>
+                <div class='row'>
+                    <div class="form-group col-xs-12 col-md-10">
+                        <label for="search_location">Find an after school program in your neighborhood:</label>
+                        <input type="text" id="search_location" class="form-control" placeholder="ex: 94603, Oakland, CA, East" >
+                    </div>
+                </div>
+                <div class='row category-select'>
+                    <div class="form-group col-xs-10 col-md-8">
+                        <label class="sr-only" for="main_search">Program</label>
+                        <select class="form-control">
+                            <option>Browse by Category</option>
+                            <option>All</option>
+                            <option>Art</option>
+                            <option>Community Service</option>
+                            <option>Outdoors</option>
+                            <option>Science</option>
+                            <option>Technology</option>
+                            <option>Sports</option>
+                            <option>Theatre</option>
+                        </select>
+                    </div> 
+                    <div class='form-group col-xs-2 col-md-2'>
+                        <button type="submit" class="btn btn-primary btn-sm"><span class="glyphicon glyphicon-search"></span> GO</button>
+                    </div>
+                </div>
+            </fieldset>
+        </form>
 
-    <form class='form-inline' role="form" action="/listviewsearched" method='get'>
-        <fieldset>
-            <div class='row'>
-                <div class="form-group col-xs-12 col-md-10">
-                    <label for="search_location">Find an after school program in your neighborhood:</label>
-                    <input type="text" id="search_location" class="form-control" placeholder="ex: 94603, Oakland, CA, East" >
-                </div>
-            </div>
-            <div class='row category-select'>
-                <div class="form-group col-xs-10 col-md-8">
-                    <label class="sr-only" for="main_search">Program</label>
-                    <select class="form-control">
-                        <option>Browse by Category</option>
-                        <option>All</option>
-                        <option>Art</option>
-                        <option>Community Service</option>
-                        <option>Outdoors</option>
-                        <option>Science</option>
-                        <option>Technology</option>
-                        <option>Sports</option>
-                        <option>Theatre</option>
-                    </select>
-                </div> 
-                <div class='form-group col-xs-2 col-md-2'>
-                    <button type="submit" class="btn btn-primary btn-sm"><span class="glyphicon glyphicon-search"></span> GO</button>
-                </div>
-            </div>
-            
-        </fieldset>
-    </form>
+    </div>
 
 
     <div class="row">
