@@ -16,22 +16,22 @@ $:header
             <div class='row'>
                 <div class="form-group col-xs-12 col-md-10">
                     <label for="search_location">Find an after school program in your neighborhood:</label>
-                    <input type="text" id="search_location" class="form-control" placeholder="ex: 94603, Oakland, CA, East" >
+                    <input name="zip" type="text" id="search_location" class="form-control" placeholder="Zip Code, ex: 94603" >
                 </div>
             </div>
             <div class='row category-select'>
                 <div class="form-group col-xs-10 col-md-8">
                     <label class="sr-only" for="main_search">Program</label>
-                    <select class="form-control">
-                        <option>Browse by Category</option>
-                        <option>All</option>
-                        <option>Art</option>
-                        <option>Community Service</option>
-                        <option>Outdoors</option>
-                        <option>Science</option>
-                        <option>Technology</option>
-                        <option>Sports</option>
-                        <option>Theatre</option>
+                    <select name="cat" class="form-control">
+                        <option value="all">Browse by Category</option>
+                        <option value="all">All</option>
+                        <option value="Art">Art</option>
+                        <option value="CommunityService">Community Service</option>
+                        <option value="Outdoors">Outdoors</option>
+                        <option value="Science">Science</option>
+                        <option value="Tech">Technology</option>
+                        <option value="Sports">Sports</option>
+                        <option value="Theatre">Theatre</option>
                     </select>
                 </div> 
                 <div class='form-group col-xs-2 col-md-2'>

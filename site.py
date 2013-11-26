@@ -39,7 +39,13 @@ class programinfo:
 class listview:
     def GET(self):
         render = web.template.render('templates')
-        query = QueryParser("short_desc", search_index.schema).parse(unicode(web.input()['q']))
+        zipcode = unicode(web.input()['zip'])
+        category = unicode(web.input()['cat'])
+        
+        if category == u"all":
+            category=""
+        
+        query = QueryParser("category", search_index.schema).parse("zipcode:"+zipcode+" "+category)
         results = None
         
         with search_index.searcher() as searcher:
