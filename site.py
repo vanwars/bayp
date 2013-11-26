@@ -7,7 +7,6 @@ urls = (
     '/categories', 'categories',
     '/programinfo', 'programinfo',
     '/listview', 'listview',
-    '/listviewsearched', 'listviewsearched',
     '/about', 'about',
     '/login', 'login',
     '/profile', 'profile',
@@ -44,7 +43,7 @@ class listview:
         
         with search_index.searcher() as searcher:
             results = searcher.search(query)
-            print results    
+            print results
             return render.listview(render.header(), render.footer(), results)
 
 class about:
