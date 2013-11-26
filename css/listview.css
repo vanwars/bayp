@@ -7,6 +7,18 @@
   padding: 5px;
 }
 
+.success {
+	color: #40AC56;
+}
+
+li.success {
+	font-size: 11.5px;
+}
+
+.success a {
+	font-size: 14px;
+}
+
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: @screen-md-min) {
 

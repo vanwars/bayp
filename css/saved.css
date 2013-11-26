@@ -7,10 +7,6 @@
   padding: 5px;
 }
 
-.success {
-	color: #40AC56;
-}
-
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: @screen-md-min) {
 
