@@ -1,23 +1,21 @@
-
-.form-group {
-	margin-bottom: 0;
-}
-
-.form-group.col-xs-2.col-md-2 {
-	padding-left: 0;
+form#login {
 	padding-right: 20px;
 }
+#login-btn {
+	padding-top: 26px;
+}
 
-.category-select {
+.row.password {
 	padding-right: 20px;
 	margin-top: 20px;
 }
 
-@media (min-width: 454px) {
-  .search-btn {
-  padding-top: 28px;
-  padding-left: 0;
+.row.password div {
+	padding-right: 5px;
+}
 
+.row.username div {
+	padding-right: 0;
 }
 
 /* Extra small devices (phones, less than 768px) */
