@@ -8,6 +8,7 @@
     <link href="css/index.css" rel="stylesheet" media="screen">
     <link href="css/categories.css" rel="stylesheet" media="screen">
     <link href="css/login.css" rel="stylesheet" media="screen">
+    <link href="css/listview.css" rel="stylesheet" media="screen">
   </head>
   
  <body>
@@ -24,22 +25,19 @@
         </div>
         <div class="collapse navbar-collapse bs-js-navbar-collapse">
           <ul class="nav navbar-nav">
-            <li class="dropdown">
-              <a href="/about" id="about" role="button" class="dropdown-toggle" data-toggle="dropdown"> About</a>
+            <li>
+              <a href="/about" id="about" role="button"> About</a>
             </li>
-<!--             <li class="dropdown">
-              <a href="/categories" id="browse" role="button" class="dropdown-toggle" data-toggle="dropdown">Browse Programs</a>
-            </li> -->
-            <li class="dropdown">
-              <a href="/contact" id="contact" role="button" class="dropdown-toggle" data-toggle="dropdown"> Contact</a>
+            <li>
+              <a href="/contact" id="contact" role="button"> Contact</a>
             </li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
 <!--             <li class="dropdown">
-              <a id="search" href="#" role="button" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-search"></span> Search <b class="caret"></b></a>
+              <a id="search" href="#" role="button" class="dropdown-toggle"><span class="glyphicon glyphicon-search"></span> Search <b class="caret"></b></a>
             </li> -->
-            <li id="account_menu" class="dropdown">
-              <a href="/login" id="account" role="button" class="dropdown-toggle" data-toggle="dropdown"><span class='glyphicon glyphicon-log-in'></span> Login <!-- <b class="caret"></b> --></a>
+            <li id="account_menu">
+              <a href="/login" id="account" role="button"><span class='glyphicon glyphicon-log-in'></span> Login <!-- <b class="caret"></b> --></a>
               <!-- <ul class="dropdown-menu" role="menu" aria-labelledby="account">
                 <li role="presentation"><a role="menuitem" tabindex="-1" href="settings.html"><span class="glyphicon glyphicon-cog"></span> Settings</a></li>
                 <li role="presentation"><a role="menuitem" tabindex="-1" href="saved.html"><span class="glyphicon glyphicon-bookmark"></span> Saved Programs</a></li>
