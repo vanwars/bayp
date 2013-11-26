@@ -8,6 +8,7 @@ urls = (
     '/programinfo', 'programinfo',
     '/listview', 'listview',
     '/about', 'about',
+    '/contact', 'contact',
     '/login', 'login',
     '/profile', 'profile',
     '/(js|css|images|fonts)/(.*)', 'static',
@@ -50,6 +51,11 @@ class about:
     def GET(self):
         render = web.template.render('templates')
         return render.about(render.header(), render.footer())
+
+class contact:
+    def GET(self):
+        render = web.template.render('templates')
+        return render.contact(render.header(), render.footer())
 
 class login:
     def GET(self):

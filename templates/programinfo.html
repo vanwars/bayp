@@ -1,7 +1,7 @@
 $def with (header, footer, program)
 $:header
 
-<div class="container">
+<div class="container programinfo">
     <div id="program_media">
       <ul id="myTab" class="nav nav-tabs">
         <li class="active"><a href="#photos" data-toggle="tab">Photos</a></li>
@@ -17,6 +17,7 @@ $:header
     <h1 class="group inner list-group-item-heading">
         <a>$program['name']</a></h1>
         <address><strong>Neighborhood: West Oakland<br>1234 Oak Street</strong></address>
+        <h3><span class="label label-default">$program['categories']</span></h3>
       <img src="http://dummyimage.com/640x4:3/1a75d6/ffffff.jpg" class="img-responsive" alt="Responsive image">
       <div class="row">
       <div class="col-xs-2">
