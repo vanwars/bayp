@@ -5,37 +5,58 @@
 		"short_desc": "Youth Radio is an award-winning media production company that trains diverse young people in digital media and technology.",
 		"long_desc": "Youth Radio is an award-winning media production company that trains diverse young people in digital media and technology.  Partnering with industry professionals, students learn to produce marketable media for massive audiences while bringing youth perspectives to issues of public concern. \n\n Our mission is to launch young people on career and education pathways by engaging them in work-based learning opportunities, creative expression, professional development, and health and academic support services. \n\n Founded in 1992 in Berkeley during a period of heightened youth violence and homicide, Youth Radio was established as an outlet for Bay Area youth to process their experiences and provide an alternative perspective to the prevailing media dialogue. In 2007, Youth Radio moved its headquarters to downtown Oakland, helping transform an under-invested part of the city into a world-class center of art, commerce, and culture.",
 		"address": "1701 Broadway, Oakland, CA 94612",
-		"zipcode": 94612
+		"zipcode": 94612,
+		"cost": 0,
+		"categories": "Tech",
+		"website": "www.youthradio.org",
+		"contact_person": "John Doe",
+		"contact_title": "Program Director",
+		"contact_phone": "(555) 555-5555",
+		"contact_email": "JohnDoe@youthradio.org"
 	},
 	{
 		"name": "Hacker Scouts",
 		"short_desc": "Hacker Scouts is a national non profit organization, founded in the Fall of 2012 in Oakland CA, that focuses on STEAM (science, technology, engineering, art, and math) education, skill building and community engagement with the aspiration to help our children develop skills in the areas they are truly interested in, abilities that would allow them to dream big and create big.",
 		"address": "6050 Lowell Street, Suite 214, Oakland, CA 94608",
-		"zipcode": 94608
+		"zipcode": 94608,
+		"cost": 0,
+		"categories": "Tech"
+
 	},
 	{
 		"name": "OSMO",
-		"short_desc": "OSMO is an afterschool program based out of the Boys and Girls Club, supporting middle and high school students in math, science, technology, and digital media."
+		"short_desc": "OSMO is an afterschool program based out of the Boys and Girls Club, supporting middle and high school students in math, science, technology, and digital media.",
+		"long_desc": "OSMO is an afterschool program based out of the Boys and Girls Club, supporting middle and high school students in math, science, technology, and digital media.",
+		"address": "1701 Broadway, Oakland, CA 94612",
+		"zipcode": 94612,
+		"cost": 0,
+		"categories": "Tech"
 	},
 	{
 		"name": "SMASH:Prep",
 		"tag": "Math and science for African American males",
-		"short_desc": "SMASH: Prep serves African American males who have demonstrated both an aptitude and interest in math and science.",
+		"short_desc": "SMASH is a rigorous 5-week, 3-year summer STEM enrichment program for underrepresented high school students of color, which provides access to rigorous coursework, college preparation, and access to mentors, role models, and support networks of students of color.",
 		"long_desc": "SMASH: Prep serves African American males who have demonstrated both an aptitude and interest in math and science. Its curriculum is designed for sixth through eighth graders and will increase the participants' college and STEM aspirations. SMASH: Prep is a year-round holistic STEM enrichment program that aims to improve mathematics and science knowledge while developing the scholars' critical thinking skills. SMASH: Prep builds positive scholar identity and provides exposure to role models and experiences that reinforce academic excellence. The program is free of cost.",
 		"address": "2781 Telegraph Ave, Oakland, CA 94612",
-		"zipcode": 94612
-	},
-	{
-		"name": "SMASH",
-		"short_desc": "SMASH is a rigorous 5-week, 3-year summer STEM enrichment program for underrepresented high school students of color, which provides access to rigorous coursework, college preparation, and access to mentors, role models, and support networks of students of color."
+		"zipcode": 94612,
+		"cost": 0,
+		"categories": "Tech"
 	},
 	{
 		"name": "Youth UpRising",
-		"short_desc": "Youth UpRising (YU) is a 25,000 sq. ft., state-of-the-art transformation center in the heart of East Oakland dedicated to community transformation powered by the leadership of youth."
+		"short_desc": "Youth UpRising (YU) is a 25,000 sq. ft., state-of-the-art transformation center in the heart of East Oakland dedicated to community transformation powered by the leadership of youth.",
+		"long_desc": "SMASH: Prep serves African American males who have demonstrated both an aptitude and interest in math and science. Its curriculum is designed for sixth through eighth graders and will increase the participants' college and STEM aspirations. SMASH: Prep is a year-round holistic STEM enrichment program that aims to improve mathematics and science knowledge while developing the scholars' critical thinking skills. SMASH: Prep builds positive scholar identity and provides exposure to role models and experiences that reinforce academic excellence. The program is free of cost.",
+		"address": "2781 Telegraph Ave, Oakland, CA 94612",
+		"zipcode": 94612,
+		"cost": 0,
+		"categories": "Tech"
 	},
 	{
 		"name": "Black Girls Code",
-		"short_desc": "The nonprofit, founded by Kimberly Bryant, aims to give girls access to good-paying professions with prestigious companies, as well as the ability to enter into the field as an entrepreneurs and leaders of technology."
+		"short_desc": "The nonprofit, founded by Kimberly Bryant, aims to give girls access to good-paying professions with prestigious companies, as well as the ability to enter into the field as an entrepreneurs and leaders of technology.",
+		"zipcode": 94612,
+		"cost": 0,
+		"categories": "Tech"
 	},
 	{
 		"name": "Hidden Genius Project",
@@ -43,14 +64,23 @@
 		"short_desc": "The Hidden Genius Project (THGP) is an Oakland, CA based non-profit that provides black male youths with the knowledge, skills, mentors and experiences to obtain and create technological jobs in this new, global, 21st century economy.",
 		"long_desc": "The Hidden Genius Project (THGP) is an Oakland, CA based non-profit that provides black male youths with the knowledge, skills, mentors and experiences to obtain and create technological jobs in this new, global, 21st century economy. We are focused on unlocking career paths in Software Engineering, User Experience Design and Technology Entrepreneurship. \n\n The Hidden Genius Project is a two-year program starting off with an intensive 8-week Summer Program.",
 	  "address": "Laney College Technology Center, 900 Fallon St, Oakland, CA 94607",
-		"zipcode": 94607
+		"zipcode": 94607,
+		"cost": 0,
+		"categories": "Tech"
 	},
 	{
 		"name": "Digital Connectors",
-		"short_desc": "Digital Connectors program identifies talented young people, immersed them in technology training, and helped them build their leadership and workplace skills to enter the 21st century economy."
+		"short_desc": "Digital Connectors program identifies talented young people, immersed them in technology training, and helped them build their leadership and workplace skills to enter the 21st century economy.",
+		"zipcode": 94607,
+		"cost": 0,
+		"categories": "Tech"
+
 	},
 	{
 		"name": "Exploratorium High School Explainer Program",
-		"short_desc": "The High School Explainers Program, high school students explain exhibits at the San Francisco Exploratorium to the public and conduct the various science demonstrations for the public."
+		"short_desc": "The High School Explainers Program, high school students explain exhibits at the San Francisco Exploratorium to the public and conduct the various science demonstrations for the public.",
+		"zipcode": 94607,
+		"cost": 0,
+		"categories": "Tech"
 	}
 ]
