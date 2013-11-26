@@ -10,7 +10,7 @@ def read_programs(filename):
     return data
     
 def whoosh_descriptions(programs):
-    schema = Schema(name=TEXT(stored=True), index=ID(stored=True), short_desc=TEXT(stored=True, analyzer=(StandardAnalyzer(minsize=2) | NgramFilter(minsize=2))))
+    schema = Schema(name=TEXT(stored=True), index=ID(stored=True), short_desc=TEXT(stored=True, analyzer=(StandardAnalyzer(minsize=2) | NgramFilter(minsize=3))))
     index = create_in("whooshindex", schema)
     writer = index.writer()
     

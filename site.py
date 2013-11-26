@@ -4,8 +4,10 @@ from whoosh.qparser import QueryParser
 
 urls = (
     '/', 'index', 
+    '/indexreal', 'indexreal',
     '/categories', 'categories',
     '/programinfo', 'programinfo',
+    '/programinforeal', 'programinforeal',
     '/listview', 'listview',
     '/listviewreal', 'listviewreal',
     '/listviewsearched', 'listviewsearched',
@@ -21,6 +23,11 @@ class index:
     def GET(self):
         render = web.template.render('templates')
         return render.index(render.header(), render.footer())
+
+class indexreal:
+    def GET(self):
+        render = web.template.render('templates')
+        return render.index_real(render.header(), render.footer())
         
 class categories:
     def GET(self):
@@ -31,6 +38,13 @@ class programinfo:
     def GET(self):
         render = web.template.render('templates')
         return render.programinfo(render.header(), render.footer())
+
+class programinforeal:
+    def GET(self):
+        render = web.template.render('templates')
+        if web.input()['ind']:
+            ind = int(web.input()['ind'])
+            return render.programinfo_real(render.header(), render.footer(), programs[ind])
 
 class listview:
     def GET(self):
