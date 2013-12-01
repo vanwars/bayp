@@ -1,5 +1,11 @@
-.container .jumbotron {
-	background-image: url('/images/bayp_main.jpg');
+
+
+.container-fluid .jumbotron {
+	margin-top: -20px;
+	/*width: 100%;
+	height: 100%;
+	background-size: 100%;
+	background-image: url('/images/BAYP_main_oakland.jpg');*/
 	background-repeat: no-repeat;
 	background-color: transparent;
 	border-radius: 1px;
@@ -9,6 +15,9 @@
 	font-size: 10px;
 }
 
+.header_text_bg {
+	background-color: #FFF;
+}
 .form-group {
 	margin-bottom: 0;
 }
@@ -39,6 +48,15 @@
 		font-size: 24.5px;
 	}
 }
+
+@media (min-width: 768px) { 
+	.container-fluid .jumbotron {
+		margin-top: -20px;
+		width: 100%;
+		height: 100%;	
+	}
+}
+
 
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: @screen-md-min) { ... }
