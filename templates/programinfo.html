@@ -1,139 +1,159 @@
 $def with (header, footer, program)
 $:header
+    <div class="container programinfo">
+        <div class="col-xs-12 col-md-12">
+            <div class="row" style="margin-top:25px;">
+                <!--program name and address -->
 
-<div class="container programinfo">
-    <div id="program_media">
-      <ul id="myTab" class="nav nav-tabs">
-        <li class="active"><a href="#photos" data-toggle="tab">Photos</a></li>
-        <li><a href="#map" data-toggle="tab">Map</a></li>
-      </ul>
-    <div class="center-block">
-    <div class="tab-content">
-    
-       <div id="photos" class="tab-pane fade in active">
-    <br>
-        <br>
-      
-    <h1 class="group inner list-group-item-heading">
-        <a>$program['name']</a></h1>
-        <address><strong>Neighborhood: West Oakland<br>$program['address']</strong></address>
-        <img src="/images/teens_blue.jpg" class="img-responsive" alt="Responsive image" style="margin-bottom: 15px;"> 
+                <h1 class="group inner list-group-item-heading">
+                $program['name']</h1>
 
-      <!-- <img src="http://dummyimage.com/640x4:3/1a75d6/ffffff.jpg" class="img-responsive" alt="Responsive image">-->
-      <div class="row">
-      <div class="col-xs-2">
-        <div class="thumbnail">
-          <img src="http://dummyimage.com/64/64/fff.jpg" alt="My Image" />
-        </div>
-      </div>
+                <address>
+                    <strong>Neighborhood: West Oakland<br>
+                    $program['address']</strong>
+                </address>
+            </div><!--/h1 and address -->
+        </div><!--/col-xs-12 col-md-12 -->
 
-      <div class="col-xs-2">
-        <div class="thumbnail">
-          <img src="http://dummyimage.com/64/64/fff.jpg" alt="My Image" />
-       </div>
-      </div>
+        <div id="program_media">
+            <ul class="nav nav-tabs" id="myTab">
+                <li class="active"><a data-toggle="tab" href=
+                "#photos">Photos</a></li>
 
-      <div class="col-xs-2">
-        <div class="thumbnail">
-          <img src="http://dummyimage.com/64/64/fff.jpg" alt="My Image" />
-        </div>
-      </div>
-    </div><!-- End Row Div --> 
+                <li><a data-toggle="tab" href="#map">Map</a></li>
+            </ul>
 
+            <div class="center-block">
+                <div class="tab-content">
+                    <div class="tab-pane fade in active" id="photos" style=
+                    "margin: 15px 0;">
+                        <div class="col-xs-12 col-md-8" id="main_photo">
+                            <img alt="Program Photo" class="img-responsive"
+                            src="/images/teens_blue.jpg" style=
+                            "margin-bottom: 25px;">
 
-       </div><!-- /photos -->
-         <div id="map" class="tab-pane fade">
-         <br>
-        <br>
-<div class="row">
-  
-    <div class="col-xs-12 col-md-8">
-    <h1 class="group inner list-group-item-heading">
-        <a>$program['name']</a>
-    </h1>
-        <address><strong>Neighborhood: West Oakland<br>$program['address']</strong></address>
-    <img src="/images/map_1.png" class="img-responsive" alt="Responsive image">
-  </div>
-    
-  <div class="col-xs-12 col-md-4">
-    <h3>Directions</h3>
-    
-<form role="form">
-    <fieldset>
-        <div class="form-group">
-        <label class="sr-only" for="directions">Street Address</label>
-            <input type="text" id="directions_start" class="form-control" placeholder="Street Adress" >
-        </div>
-        
-        <div class="form-group">
-        <label class="sr-only" for="directions">Destination</label>
-            <input type="text" id="directions_end" class="form-control" placeholder="1234 Oak Street" >
-    </div>
+                            <div class="row" style="margin-bottom: 25px;"><!--thumbnail -->
+                                <a href="#main_photo"><img alt=
+                                "Program Photo" src=
+                                "http://dummyimage.com/64/64/fff.jpg"></a>
+                                <a href="#main_photo"><img alt=
+                                "Program Photo" src=
+                                "http://dummyimage.com/64/64/fff.jpg"></a>
+                                <a href="#main_photo"><img alt=
+                                "Program Photo" src=
+                                "http://dummyimage.com/64/64/fff.jpg"></a>
+                                <a href="#main_photo"><img alt=
+                                "Program Photo" src=
+                                "http://dummyimage.com/64/64/fff.jpg"></a>
+                            </div><!--/thumbnail row div -->
+                        </div><!-- /main_photo-->
 
-    <div class="form-group">
-  <button id="directions" type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-search"></span> GO</button>
-    </div>
-    
-    </fieldset>
+                        <div class="col-xs-12 col-md-4">
+                            <div class="row">
+                                <p class="stats"><a href="/"><span class="glyphicon glyphicon-thumbs-up"></a></span><strong> 43 Recommend This </strong></p>
+                                <p class="stats"><strong>Category: </strong><span class="label label-default"> $program['categories']</span></p>
+                                <p class="stats"><span class="glyphicon glyphicon-usd"></span><strong> Price: </strong> Free </p>
+                                <p class="stats"><span class="glyphicon glyphicon-calendar"></span><strong> Date & Time: </strong><br>Tuesdays & Thursdays<br> 6:00PM - 7:30PM <br>12/03/2013 - 01/14/2014 </p>             
+                                <div class="btn-group btn-group-justified" style="padding-bottom: 10px;">
 
-</form>
+                                    <a class="btn btn-primary" role="button"><strong> Request Info </strong></a>
+                                    <a class="btn btn-primary" role="button"><span class="glyphicon glyphicon-bookmark"></span><strong> Save Program </strong>
+                                    </a>
+                                    
+                                </div>
 
-        </div><!-- /map -->
-        
-        </div><!-- /tab content -->
-        </div><!-- centered media -->    
-    </div><!-- /program_media -->
+                             </div><!--/row-->
+                        </div><!-- /col-xs-12 col-md-4-->
+                    </div><!--/#photos-->
 
+                    <div class="tab-pane fade" id="map" style=
+                    "margin: 25px 0;">
+                        <div class="col-xs-12 col-md-8">
+                            <div class="row"><!--main map row div -->
+                            <img alt="Responsive image" class="img-responsive"
+                            src="/images/map_1.png" style=
+                            "margin-bottom: 25px;"></div>
+                        </div><!-- /main_photo-->
 
-<div style="border-bottom: groove 1px; margin: 25px 0px;"></div> <!-- separate content with hairline rule -->
+                        <div class="col-xs-12 col-md-4">
+                            <div class="row">
+                                <p class="stats"><a href="/"><span class="glyphicon glyphicon-thumbs-up"></a></span><strong> 43 Recommend This </strong></p>
+                                <p class="stats"><strong>Category: </strong><span class="label label-default"> $program['categories']</span></p>
+                                <p class="stats"><span class="glyphicon glyphicon-usd"></span><strong> Price: </strong> Free </p>
+                                <p class="stats"><span class="glyphicon glyphicon-calendar"></span><strong> Date & Time: </strong><br>Tuesdays & Thursdays<br> 6:00PM - 7:30PM <br>12/03/2013 - 01/14/2014 </p>             
+                                <div class="btn-group btn-group-justified" style="padding-bottom: 10px;">
 
-<div class="row">
-<div class="col-xs-12 col-md-8">
-  <h3 class="group inner list-group-item-heading">
-        <!-- <a href="/">Custom Headline for Program 1</a></h3> -->
-				<h3><span class="label label-default">$program['categories']</span></h3>
-        <address><strong>Neighborhood: West Oakland<br>1234 Oak Street</strong></address>
-      
-        <ul class="list-inline">
-          <li><a href="programinfo.html"><span class="glyphicon glyphicon-usd"></span> Price: </a></li>
-          <li><a href="/"><span class="glyphicon glyphicon-bookmark"></span> Save Program</a><li>
-        </ul>
-        
-        <span class="glyphicon glyphicon-thumbs-up"><small> 43 Recommend This</small></span>
-        <br>
-        <br>
-        
-    <p class="lead">
-      $program['short_desc']
-    </p>
-  <!--<p class="group inner list-group-item-text"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum lacus risus, ultrices vel vulputate sed, ultrices id velit. Nullam at hendrerit lectus. Morbi tincidunt vel lorem vitae convallis. Duis eu dui vitae nunc laoreet tincidunt in id massa. Ut varius vitae ante id dictum. Ut ultrices nunc ac orci malesuada, venenatis mattis dui tempor.</p> -->
-
-<div style="border-bottom: groove 1px; margin: 25px 0px;"></div> <!-- separate content with hairline rule -->
+                                    <a class="btn btn-primary" role="button"><strong> Request Info </strong></a>
+                                    <a class="btn btn-primary" role="button"><span class="glyphicon glyphicon-bookmark"></span><strong> Save Program </strong>
+                                    </a>
+                                    
+                                </div>
 
 
-</div><!-- wider column for program description-->  
+                                <div class="stats">
+                                    <strong>Directions</strong>
+
+                                    <form>
+                                        <fieldset>
+                                            <div class="form-group">
+                                                <div style=
+                                                "padding-bottom:8px; padding-right:15px;">
+                                                <label class="sr-only" for=
+                                                "directions">Street
+                                                Address</label>
+                                                    <input class="form-control"
+                                                    id="directions_start"
+                                                    placeholder=
+                                                    "Street Address" type=
+                                                    "text">
+                                                </div>
+
+                                                <div style=
+                                                "padding-bottom:8px; padding-right:15px;">
+                                                <label class="sr-only" for=
+                                                "directions">Destination</label>
+                                                <input class="form-control"
+                                                    id="directions_end"
+                                                    placeholder=
+                                                    "1234 Oak Street" type=
+                                                    "text">
+                                                </div><button class=
+                                                "btn btn-primary" id=
+                                                "directions" type=
+                                                "submit">GO</button>
+                                            </div>
+                                        </fieldset>
+                                    </form>
+                                </div><!--/directions -->
+                            </div><!--/row -->
+                        </div><!-- /col-xs-12 col-md-4-->
+                    </div><!-- /map -->
+                </div><!-- /tab-content -->
+            </div><!-- /center-block-->
+        </div><!-- /program_media -->
+        <!--<p class="group inner list-group-item-text"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum lacus risus, ultrices vel vulputate sed, ultrices id velit. Nullam at hendrerit lectus. Morbi tincidunt vel lorem vitae convallis. Duis eu dui vitae nunc laoreet tincidunt in id massa. Ut varius vitae ante id dictum. Ut ultrices nunc ac orci malesuada, venenatis mattis dui tempor.</p> -->
+
+        <div class="col-xs-12 col-md-8">
+            <div class="row">
+                <p>$program['short_desc']</p>
 
 
-<div class="col-xs-12 col-md-4">
-<div class="media">
-$if 'contact_person' in program:
-    <a class="pull-left" href="#">
-    <img src="/images/staff.jpg" class="media-object" alt="staff">
-    </a>
-    <div class="media-body">
-    <h4 class="media-heading">$program['contact_person']<br>$program['contact_title']</h4>
-    <p>$program['contact_phone']</p>
-    </div><!--media body-->
-    <!--<a href="#"><strong> View Programs Posted by Kevin</strong></a>-->
+                <div class="media">
+                    $if 'contact_person' in program: <a class="pull-left" href=
+                    "#"><img alt="staff" class="media-object" src=
+                    "/images/staff.jpg"></a>
 
-</div><!--media--> 
-</div><!--/right minor column -->
-</div><!--/row-->
- 
+                    <div class="media-body">
+                        <h4 class="media-heading">
+                        $program['contact_person']</h4>
 
-
-
-</div><!--container-->
+                        <p><strong>$program['contact_title']</strong><br>
+                        $program['contact_phone']</p>
+                    </div><!--media body-->
+                </div><!--media-->
+            </div>
+        </div><!-- wider column for program description-->
+    </div><!--container-->
 
 
 $:footer

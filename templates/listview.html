@@ -1,37 +1,57 @@
 $def with (header, footer, programs, category, zipcode)
 $:header
 
-<div class="container listview">
-  <div class="row">
-    <div class="col-xs-12 col-md-12">
-        <h4><span class='label'>$category</span> programs near <span class='label'>$zipcode</span>.</h4>
-    </div><!-- program results -->
-  </div><!-- row -->
-  <div class="row">
-    <div class="col-xs-12 col-md-12">
-        <ol>
-            $for program in programs:
+    <div class="container listview">
+        <div class="row">
+            <div class="col-xs-12 col-md-12">
+                <h4><span class='label'>$category</span> programs near
+                <span class='label'>$zipcode</span>.</h4>
+            </div><!-- program results -->
+        </div><!-- row -->
 
-                <li style="border-bottom: groove 1px; padding: 15px 0px;">
-                  <h4 class="group inner list-group-item-heading">
-                   <a href="programinfo?ind=$program['index']">$program['name']</a>
-                  </h4>
-                <address><strong>Neighborhood: West Oakland<br>1234 Oak Street</strong></address>
-                <p class="group inner list-group-item-text"> $program['short_desc']</p><br>
-                <ul class="list-inline">
-                  <li><a href="programinfo.html"><span class="glyphicon glyphicon-usd"></span> Price: </a></li>
-                  <li class='bookmark'>
-                    <a href='#' class='bookmark' data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-bookmark"></span>
-                      Save Program
-                    </a>
-                  </li>
-                  <li class='success'>Success!</li>
-                  
-                </ul>
-              <span class="glyphicon glyphicon-thumbs-up"><small> 43 Recommend This</small></span></li>
-        </ol><!-- end ordered list-->
-    </div><!-- program results -->
-  </div><!-- row -->
-</div><!-- container -->
+        <div style="background-color: #F7F7F7; padding-top: 15px;">
+            <div class="row">
+            <!-- THUMBNAILS -->
+
+                <!--<div class="col-md-2">
+                    <a href="#main_photo"><img alt="Program Photo" src=
+                        "http://dummyimage.com/64/64/fff.jpg"></a>
+                </div>-->
+
+                    <div class="col-md-10">
+                        <div style="margin-left: 2em">
+                            $for program in programs:
+
+                            <h4 class="group inner list-group-item-heading">
+                            <a href=
+                            "programinfo?ind=$program['index']">$program['name']</a></h4>
+
+                            <address>
+                                <strong>Neighborhood: West Oakland</strong>
+                            </address>
+                            <p><span class=
+                            "glyphicon glyphicon-thumbs-up"><small>43 Recommend
+                            This</small></span></p>
+                            <!--<p class="group inner list-group-item-text"> $program['short_desc']</p><br>-->
+
+                            <ul class="list-inline" style="padding-bottom: 15px;">
+                                <li><small><span class="glyphicon glyphicon-usd">:
+                                </span></small></li>
+
+                                <li><small><span class="glyphicon glyphicon-calendar">:
+                                </span></small></li>
+
+                                <li class='bookmark'><small><a class='bookmark'
+                                data-target="#myModal" data-toggle="modal"
+                                href='#'>
+                                <span class="glyphicon glyphicon-bookmark"> Save Program</span></a></small></li>
+
+                                <li class='success'>Success!</li>
+                            </ul>
+                        </div><!-- /ordered list-->
+                    </div><!-- /program results -->
+            </div><!--/row-->
+        </div><!-- div baground-->
+    </div>
 
 $:footer
