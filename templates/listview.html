@@ -1,10 +1,10 @@
-$def with (header, footer, programs, category, zipcode)
+$def with (header, footer, programs, backup_programs, category, zipcode)
 $:header
 
 <div class="container listview">
   <div class="row">
     <div class="col-xs-12 col-md-12">
-        <h4><span class='label'>$category</span> programs near <span class='label'>$zipcode</span>.</h4>
+        <h4><span class='label'>$category</span> programs in <span class='label'>$zipcode</span>.</h4>
     </div><!-- program results -->
   </div><!-- row -->
   <div class="row">
@@ -33,5 +33,40 @@ $:header
     </div><!-- program results -->
   </div><!-- row -->
 </div><!-- container -->
+
+<div class="container listview">
+  <div class="row">
+    <div class="col-xs-12 col-md-12">
+        <h4>Other programs near you.</h4>
+    </div><!-- program results -->
+  </div><!-- row -->
+  <div class="row">
+    <div class="col-xs-12 col-md-12">
+        <ol>
+            $for program in backup_programs:
+
+                <li style="border-bottom: groove 1px; padding: 15px 0px;">
+                  <h4 class="group inner list-group-item-heading">
+                   <a href="programinfo?ind=$program['index']">$program['name']</a>
+                  </h4>
+                <address><strong>Neighborhood: West Oakland<br>1234 Oak Street</strong></address>
+                <p class="group inner list-group-item-text"> $program['short_desc']</p><br>
+                <ul class="list-inline">
+                  <li><a href="programinfo.html"><span class="glyphicon glyphicon-usd"></span> Price: </a></li>
+                  <li class='bookmark'>
+                    <a href='#' class='bookmark' data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-bookmark"></span>
+                      Save Program
+                    </a>
+                  </li>
+                  <li class='success'>Success!</li>
+                  
+                </ul>
+              <span class="glyphicon glyphicon-thumbs-up"><small> 43 Recommend This</small></span></li>
+        </ol><!-- end ordered list-->
+    </div><!-- program results -->
+  </div><!-- row -->
+</div><!-- container -->
+
+
 
 $:footer

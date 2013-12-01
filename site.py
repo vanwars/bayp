@@ -51,12 +51,32 @@ class listview:
                 category=""
                 backup_query = QueryParser("category", search_index.schema).parse("*")
 
+            if zipcode == u"":
+                zipcode = "*"
+
             backup_results = searcher.search(backup_query)
+            if len(backup_results) == 0:
+                backup_query = QueryParser("category", search_index.schema).parse("*")
+                backup_results = searcher.search(backup_query)
                 
             query = QueryParser("category", search_index.schema).parse("zipcode:"+zipcode+" "+category)
             results = searcher.search(query)
-            results.filter(backup_results)
-            return render.listview(render.header(), render.footer(), results, category, zipcode)
+            
+            filtered_backups = []
+            
+            #dedup results
+            for i in xrange(10):
+                found_match = False
+                for j in xrange(10):
+                    try:
+                        if backup_results[i]['name'] == results[j]['name']:
+                            found_match = True
+                    except IndexError:
+                        continue
+                if not found_match:
+                    filtered_backups.append(backup_results[i])
+                
+            return render.listview(render.header(), render.footer(), results, filtered_backups, category, zipcode)
 
 class about:
     def GET(self):
