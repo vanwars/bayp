@@ -10,6 +10,8 @@ urls = (
     '/about', 'about',
     '/contact', 'contact',
     '/login', 'login',
+    '/logout', 'logout',
+    '/register', 'register',
     '/profile', 'profile',
     '/saved', 'saved',
     '/(js|css|images|fonts)/(.*)', 'static',
@@ -18,6 +20,13 @@ urls = (
 programs = program_reader.read_programs("programs.json")
 search_index = program_reader.whoosh_descriptions(programs)
 
+app = web.application(urls, globals())
+
+if web.config.get('_session') is None:
+    session = web.session.Session(app, web.session.DiskStore('sessions'), initializer={'user': 'anonymous'})
+    web.config._session = session
+else:
+    session = web.config._session
 
 class index:
     def GET(self):
@@ -88,15 +97,44 @@ class contact:
         render = web.template.render('templates')
         return render.contact(render.header(), render.footer())
 
+# User capabilities
+users = {'antonio' : 'baseball4ever', 'valerie' : 'password'}
+
 class login:
     def GET(self):
         render = web.template.render('templates')
-        return render.login(render.header(), render.footer())
+        error = False
+        if session.user == 'anonymous':
+            return render.login(render.header(), render.footer(), error, session.user, render.login_form())
+        else:
+            raise web.seeother('/profile')
+
+    def POST(self):
+        username = unicode(web.input()['username'])
+        password = unicode(web.input()['password'])
+        error = False
+        if not username in users: 
+            error = "This user does not exist. Try again."
+            return render.login(render.header(), render.footer(), error, session.user, render.login_form())
+        elif not username or not password: 
+            error = "You must enter a username and a password"
+            return render.login(render.header(), render.footer(), error, session.user, render.login_form())
+        elif username in users and users[username] == password:
+            session.user = username
+            raise web.seeother('/profile')
+
+class logout:
+    def GET(self):
+        session.kill()
+        raise web.seeother('/')
 
 class profile:
     def GET(self):
         render = web.template.render('templates')
-        return render.profile(render.header(), render.footer())  
+        if session.user == 'anonymous':
+            raise web.seeother('/login')
+        else:
+            return render.profile(render.header(), render.footer(), session.user)
 
 class saved:
     def GET(self):
@@ -118,5 +156,4 @@ class static:
             return '' # you can send a 404 error here if you want
 
 if __name__ == "__main__":
-    app = web.application(urls, globals())
     app.run()
