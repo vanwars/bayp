@@ -1,12 +1,14 @@
 $def with (header, footer, programs, backup_programs, category, zipcode)
 $:header
 
+
 <div class="container listview">
   <div class="row">
     <div class="col-xs-12 col-md-12">
         <h4><span class='label'>$category</span> programs in <span class='label'>$zipcode</span>.</h4>
-    </div><!-- program results -->
+    </div><!--program category and zip code header -->
   </div><!-- row -->
+ <div style="background-color: #F7F7F7; padding-top: 15px;">
   <div class="row">
     <div class="col-xs-12 col-md-12">
         <ol>
@@ -17,9 +19,11 @@ $:header
                    <a href="programinfo?ind=$program['index']">$program['name']</a>
                   </h4>
                 <address><strong>Neighborhood: West Oakland<br>1234 Oak Street</strong></address>
-                <p class="group inner list-group-item-text"> $program['short_desc']</p><br>
                 <ul class="list-inline">
                   <li><a href="programinfo.html"><span class="glyphicon glyphicon-usd"></span> Price: </a></li>
+		  <li><small><span class="glyphicon glyphicon-calendar">:
+                                </span></small></li>
+
                   <li class='bookmark'>
                     <a href='#' class='bookmark' data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-bookmark"></span>
                       Save Program
@@ -32,6 +36,7 @@ $:header
         </ol><!-- end ordered list-->
     </div><!-- program results -->
   </div><!-- row -->
+ </div><!--results div stlye -->
 </div><!-- container -->
 
 <div class="container listview">
@@ -53,6 +58,8 @@ $:header
                 <p class="group inner list-group-item-text"> $program['short_desc']</p><br>
                 <ul class="list-inline">
                   <li><a href="programinfo.html"><span class="glyphicon glyphicon-usd"></span> Price: </a></li>
+		  <li><small><span class="glyphicon glyphicon-calendar">:
+                                </span></small></li>
                   <li class='bookmark'>
                     <a href='#' class='bookmark' data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-bookmark"></span>
                       Save Program
@@ -66,7 +73,5 @@ $:header
     </div><!-- program results -->
   </div><!-- row -->
 </div><!-- container -->
-
-
 
 $:footer

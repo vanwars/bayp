@@ -1,53 +1,74 @@
 $def with (header, footer)
 $:header
 
-<div class="container col-md-10 col-md-offset-1">
-
+<div class="container-fluid">
     <div class="jumbotron">    
-        <div class='row'>
-            <h1>BAY-P</h1>
-            <p class="lead">Connecting Bay Area youth with after school programs.</p>
+        <div class="row">
+            <div class="form-group col-xs-12 col-md-6">
+                <div class="splash_text_bg ">
+                     <h1>Connecting Bay Area youth with after school programs.</h1>
+                    <p style="font-size: 18px;">Find an after school program in your neighborhood:</p>
+
+                </div>
+            </div>
         </div>
         <form class='form-inline' role="form" action="/listview" method='get'>
             <fieldset>
-                <div class='row'>
-                    <div class="form-group col-xs-12 col-md-10">
-                        <label for="search_location">Find an after school program in your neighborhood:</label>
-                        <input name="zip" type="text" id="search_location" class="form-control" placeholder="Zip Code, ex: 94603" >
+                <div class="row">
+                <div class="form-group col-xs-12 col-md-6">
+                    <div class="splash_text_bg">
+                        <div class="row">
+                            <div class="form-group col-xs-12 col-md-6">
+                                    <input name="zip" type="text" id="search_location" class="form-control" placeholder="Zip Code, ex: 94603" >
+                                    <label class="sr-only" for="search_location">Find an after school program in your neighborhood:</label>
+                            </div>
+                            <div class="form-group col-xs-12 col-md-6">
+                                    <label class="sr-only" for="main_search">Program</label>
+                                    <select name="cat" class="form-control">
+                                        <option value="all">Browse by Category</option>
+                                        <option value="all">All</option>
+                                        <option value="Arts">Art</option>
+                                        <option value="Community Service">Community Service</option>
+                                        <option value="Outdoors">Outdoors</option>
+                                        <option value="Science">Science</option>
+                                        <option value="Tech">Technology</option>
+                                        <option value="Sports">Sports</option>
+                                        <option value="Theatre">Theatre</option>
+                                    </select>
+                            </div>
+                            <div class="row">
+                                <div class='form-group col-xs-12 col-md-6'>
+                                    <div class="splash_text_bg" >
+                                        <button type="submit" class="btn btn-primary btn-sm" style="margin-top:-25px; background-color: #2D2D2D !important;">
+                                        <span class="glyphicon glyphicon-search">
+                                        </span> GO</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> 
                     </div>
                 </div>
-                <div class='row category-select'>
-                    <div class="form-group col-xs-10 col-md-8">
-                        <label class="sr-only" for="main_search">Program</label>
-                        <select name="cat" class="form-control">
-                            <option value="all">Browse by Category</option>
-                            <option value="all">All</option>
-                            <option value="Arts">Art</option>
-                            <option value="Community Service">Community Service</option>
-                            <option value="Outdoors">Outdoors</option>
-                            <option value="Science">Science</option>
-                            <option value="Tech">Technology</option>
-                            <option value="Sports">Sports</option>
-                            <option value="Theatre">Theatre</option>
-                        </select>
-                    </div> 
-                    <div class='form-group col-xs-2 col-md-2'>
-                        <button type="submit" class="btn btn-primary btn-sm"><span class="glyphicon glyphicon-search"></span> GO</button>
-                    </div>
                 </div>
+
             </fieldset>
         </form>
     </div>
 
-
+</div>
+<div class="container col-md-12">
     <div class="row">
-
-       	<div class="col-xs-12 col-md-6">
-          	<h2><a href='/about'>About Bay-P</a></h2>
+       	<div class="col-xs-12 col-md-4">
+          	<h3><a href='/about'>About Bay-P</a></h3>
+            <p>Bay-P is an Oakland-grown organization. Founded by Saleeha Bey . . . </p>
         </div>
-        
-        <div class="col-xs-12 col-md-6">
-          	<h2><a href='/contact'>Contact</a></h2>
+        <div class="col-xs-12 col-md-4">
+            <h3><a href='/#'>Create a Profile</a></h3>
+            <p>Interested in keeping up with local programs or creating your own? Join our community . . . </p>
+        </div>
+        <div class="col-xs-12 col-md-4">
+          	<h3><a href='/contact'>Contact</a></h3>
+            <p>Bay-P is organized by the community it serves. Have questions? Ask the experts . . . </p>
+
         </div>
     </div>
 
