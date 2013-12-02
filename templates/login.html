@@ -1,4 +1,4 @@
-$def with (header, footer, error, session, login_form)
+, login_form)
 $:header
 
 <div class="container col-md-10 col-md-offset-1">
@@ -7,9 +7,7 @@ $:header
             <h1>Log in to BAY-P</h1>
         </div>
     </div>
-    $session
-    $if error:
-        <p class='error'>error</p>
+
     $:login_form
 
 </div><!-- /.container -->

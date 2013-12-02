@@ -110,8 +110,9 @@ class login:
             raise web.seeother('/profile')
 
     def POST(self):
-        username = unicode(web.input()['username'])
-        password = unicode(web.input()['password'])
+        render = web.template.render('templates')
+        username = web.input().username
+        password = web.input().password
         error = False
         if not username in users: 
             error = "This user does not exist. Try again."
@@ -139,13 +140,15 @@ class profile:
 class saved:
     def GET(self):
         render = web.template.render('templates')
-        saved = programs[0:3]
-        i = 1
-        for key in saved:
-            key['index'] = i
-            i += 1
-        print saved
-        return render.saved(render.header(), render.footer(), saved)    
+        if session.user == 'anonymous':
+            raise web.seeother('/login')
+        else:
+            saved = programs[0:3]
+            i = 1
+            for key in saved:
+                key['index'] = i
+                i += 1
+            return render.saved(render.header(), render.footer(), saved)    
 
 class static:
     def GET(self, media, file):
