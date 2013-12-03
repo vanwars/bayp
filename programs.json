@@ -12,7 +12,13 @@
 		"contact_person": "John Doe",
 		"contact_title": "Program Director",
 		"contact_phone": "(555) 555-5555",
-		"contact_email": "JohnDoe@youthradio.org"
+		"contact_email": "JohnDoe@youthradio.org",
+		"school": "Oakland Technical High School",
+		"beg_date": "Jan 23",
+		"end_date": "Mar 15",
+		"time": "Mon 3pm-5pm",
+		"likes": "2"
+
 	},
 	{
 		"name": "Hacker Scouts",
@@ -21,7 +27,12 @@
 		"address": "6050 Lowell Street, Suite 214, Oakland, CA 94608",
 		"zipcode": 94608,
 		"cost": 0,
-		"categories": "Tech"
+		"categories": "Tech",
+		"school": "Skyline High School",
+		"beg_date": "Feb 23",
+		"end_date": "Mar 15",
+		"time": "Mon-Fri 3pm-5pm",
+		"likes": "22"
 
 	},
 	{
@@ -32,7 +43,12 @@
 		"address": "1701 Broadway, Oakland, CA 94612",
 		"zipcode": 94612,
 		"cost": 0,
-		"categories": "Tech"
+		"categories": "Tech",
+		"school": "Oakland Technical High School",
+		"beg_date": "Jan 23",
+		"end_date": "May 15",
+		"time": "Fri 3pm-4pm",
+		"likes": "222"
 	},
 	{
 		"name": "SMASH:Prep",
@@ -42,7 +58,12 @@
 		"address": "2781 Telegraph Ave, Oakland, CA 94612",
 		"zipcode": 94612,
 		"cost": 0,
-		"categories": "Tech"
+		"categories": "Tech",
+		"school": "Skyline High School",
+		"beg_date": "Jan 23",
+		"end_date": "Mar 15",
+		"time": "Mon 3pm-5pm",
+		"likes": "32"
 	},
 	{
 		"name": "Youth UpRising",
@@ -53,6 +74,11 @@
 		"zipcode": 94612,
 		"cost": 0,
 		"categories": "Tech"
+		"school": "Skyline High School",
+		"beg_date": "Jan 23",
+		"end_date": "Mar 15",
+		"time": "Mon 3-5",
+		"likes": "2"
 	},
 	{
 		"name": "Black Girls Code",
@@ -61,6 +87,11 @@
 		"zipcode": 94612,
 		"cost": 0,
 		"categories": "Tech"
+		"school": "Oakland Technical High School",
+		"beg_date": "Jan 23",
+		"end_date": "Mar 15",
+		"time": "Mon & Wed 3pm-5pm",
+		"likes": "12"
 	},
 	{
 		"name": "Hidden Genius Project",
@@ -69,8 +100,13 @@
 		"long_desc": "The Hidden Genius Project (THGP) is an Oakland, CA based non-profit that provides black male youths with the knowledge, skills, mentors and experiences to obtain and create technological jobs in this new, global, 21st century economy. We are focused on unlocking career paths in Software Engineering, User Experience Design and Technology Entrepreneurship. \n\n The Hidden Genius Project is a two-year program starting off with an intensive 8-week Summer Program.",
 	  	"address": "Laney College Technology Center, 900 Fallon St, Oakland, CA 94607",
 		"zipcode": 94607,
-		"cost": 0,
+		"cost": 10,
 		"categories": "Tech"
+		"school": "Oakland Technical High School",
+		"beg_date": "Jan 23",
+		"end_date": "Mar 15",
+		"time": "Mon 3pm-5pm",
+		"likes": "2"
 	},
 	{
 		"name": "Digital Connectors",
@@ -79,6 +115,11 @@
 		"zipcode": 94607,
 		"cost": 0,
 		"categories": "Tech"
+		"school": "Oakland Technical High School",
+		"beg_date": "Feb 13",
+		"end_date": "Mar 15",
+		"time": "Sat 3pm-5pm",
+		"likes": "6"
 
 	},
 	{
@@ -88,6 +129,11 @@
 		"zipcode": 94607,
 		"cost": 0,
 		"categories": "Tech"
+		"school": "Oakland Technical High School",
+		"beg_date": "Jan 23",
+		"end_date": "Mar 15",
+		"time": "Mon 3-5",
+		"likes": "9"
 	},
 	{
 		"name": "Clothing Giveaway",
@@ -96,14 +142,24 @@
 		"zipcode": 94612,
 		"cost": 0,
 		"categories": "Community Service"
+		"school": "Skyline High School",
+		"beg_date": "Feb 23",
+		"end_date": "Mar 15",
+		"time": "Mon 3-5",
+		"likes": "0"
 	},
 	{
 		"name": "Spanish Language Tutor",
 		"org": "Livermore American Indian Center",
 		"short_desc": "Livermore American Indian Center is looking for someone who can tutor Spanish for a 9th grade high school student in the Livermore area. This would be a good opportunity for someone to share their Spanish language background.",
 		"zipcode": 94612,
-		"cost": 0,
+		"cost": 30,
 		"categories": "Community Service"
+		"school": "Skyline High School",
+		"beg_date": "Jan 23",
+		"end_date": "Mar 15",
+		"time": "Mon-Fri 3pm-5pm",
+		"likes": "7"
 	},
 	{
 		"name": "Nursery Propagators Needed at The Ruth Bancroft Garden!",
@@ -112,6 +168,11 @@
 		"zipcode": 94612,
 		"cost": 0,
 		"categories": "Community Service"
+		"school": "Skyline High School",
+		"beg_date": "Jan 23",
+		"end_date": "Mar 15",
+		"time": "Sun 3pm-5m",
+		"likes": "2"
 	},
 	{
 		"name": "Love Children? Want to Read and make an Art Project?",
@@ -120,6 +181,11 @@
 		"zipcode": 94612,
 		"cost": 0,
 		"categories": "Community Service"
+		"school": "Skyline High School",
+		"beg_date": "Jan 23",
+		"end_date": "Mar 15",
+		"time": "Mon 3pm-5pm",
+		"likes": "22"
 	},
 	{
 		"name": "Community Service Hours",
@@ -134,7 +200,12 @@
 		"contact_person": "John Doe",
 		"contact_title": "Program Director",
 		"contact_phone": "(555) 555-5555",
-		"contact_email": "JohnDoe@apedf.org"
+		"contact_email": "JohnDoe@apedf.org",
+		"school": "Oakland Technical High School",
+		"beg_date": "Jan 1",
+		"end_date": "Dec 31",
+		"time": "Any Day",
+		"likes": "0"
 	},
 	{
 		"name": "Serve meals a day in our dining room - Fight hunger in Oakland",
@@ -150,6 +221,11 @@
 		"contact_title": "Community Engagement Manager",
 		"contact_phone": "(510) 877-9252",
 		"contact_email": "RosaB@svdp.org"
+		"school": "Oakland Technical High School",
+		"beg_date": "Jan 23",
+		"end_date": "Mar 15",
+		"time": "Mon-Fri 3pm-5pm",
+		"likes": "2"
 	},
 	{
 		"name": "Help make learning fun! Tutor and Mentor West Oakland Youth!",
@@ -165,6 +241,11 @@
 		"contact_title": "Community Engagement Manager",
 		"contact_phone": "(510) 877-9252",
 		"contact_email": "JessicaB@boostoakland.org"
+		"school": "Oakland Technical High School",
+		"beg_date": "Jan 29",
+		"end_date": "May 15",
+		"time": "Mon 3pm-5pm",
+		"likes": "1"
 	},
 	{
 		"name": "Love Children? Want to Read and make an Art Project?",
@@ -173,6 +254,11 @@
 		"zipcode": 94612,
 		"cost": 0,
 		"categories": "Arts"
+		"school": "Skyline High School",
+		"beg_date": "Jan 23",
+		"end_date": "Mar 15",
+		"time": "Mon 3pm-5pm",
+		"likes": "2"
 	},
 	{
 		"name": "Performing arts and new media classes",
@@ -181,6 +267,11 @@
 		"zipcode": 94612,
 		"cost": 0,
 		"categories": "Arts"
+		"school": "Oakland Technical High School",
+		"beg_date": "Jan 23",
+		"end_date": "Mar 15",
+		"time": "Mon & Wed 3pm-5pm",
+		"likes": "2"
 	},
 	{
 		"name": "Fire it up: Crucible Youth Programs",
@@ -189,22 +280,37 @@
 		"zipcode": 94612,
 		"cost": 0,
 		"categories": "Arts"
+		"school": "Skyline High School",
+		"beg_date": "Jan 23",
+		"end_date": "Mar 15",
+		"time": "Fri 3pm-5pm",
+		"likes": "13"
 	},
 	{
 		"name": "Hands-on arts: After School Art + Science",
 		"org": "Junior Center of Art and Science",
 		"short_desc": "This long-running program teaches after-school visual arts, carpentry, clay, and more for tots through teens, right on the shores of Lake Merritt. The facility is a venture of the Junior League, Oakland’s Office of Parks and Recreation, and other groups.",
 		"zipcode": 94612,
-		"cost": 0,
+		"cost": 10,
 		"categories": "Arts"
+		"school": "Skyline High School",
+		"beg_date": "Feb 2",
+		"end_date": "Mar 25",
+		"time": "Mon 3pm-5pm",
+		"likes": "2"
 	},
 	{
 		"name": "Claytime: Children’s & Teens’ Wet Clay Classes",
 		"org": "Kids ’N’ Clay",
 		"short_desc": "From the very basics—infant footprint tiles—to technique-intensive skills like wheel-throwing, this lively studio stresses personal development, creative problem-solving skills, and fun. Not to mention Kids ’N’ Clay teachers theorize that pounding, squishing, rolling, and shaping wet clay go hand in hand with untethered imaginations.",
 		"zipcode": 94612,
-		"cost": 0,
+		"cost": 20,
 		"categories": "Arts"
+		"school": "Oakland Technical High School",
+		"beg_date": "Jan 23",
+		"end_date": "Mar 15",
+		"time": "Wed 4pm-5pm",
+		"likes": "7"
 	},
 	{
 		"name": "Performance power",
@@ -213,14 +319,24 @@
 		"zipcode": 94612,
 		"cost": 0,
 		"categories": "Arts"
+		"school": "Oakland Technical High School",
+		"beg_date": "Jan 23",
+		"end_date": "Mar 15",
+		"time": "Sat 10am-12pm",
+		"likes": "0"
 	},
 	{
 		"name": "Dance, dance, dance",
 		"org": "Next Step Dance Studio",
 		"short_desc": "Whether your daughter or son wants to do hip-hop, ballet, jazz, or tap moves like Fred Astaire, this school’s three locations offer challenging and recreational classes for all ages and styles of dance. Ultimately, owner Lori Buffalow wants her classes to help kids, from tots to teens, learn to move their bodies in ways that instill them with confidence as dancers—and in life.",
 		"zipcode": 94612,
-		"cost": 0,
-		"categories": "Arts"
+		"cost": 50,
+		"categories": "Arts",
+		"school": "Skyline High School",
+		"beg_date": "Jan 29",
+		"end_date": "Apr 15",
+		"time": "Tue&Thurs 4pm-5pm",
+		"likes": "12"
 	}
 
 
