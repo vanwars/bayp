@@ -1,5 +1,6 @@
 import web
 import program_reader
+import tempfile
 from whoosh.qparser import QueryParser
 
 urls = (
@@ -31,12 +32,12 @@ else:
 class index:
     def GET(self):
         render = web.template.render('templates')
-        return render.index(render.header(), render.footer(), session.user)
+        return render.index(render.header(session.user), render.footer(), session.user)
         
 class categories:
     def GET(self):
         render = web.template.render('templates')
-        return render.categories(render.header(), render.footer())
+        return render.categories(render.header(session.user), render.footer())
 
 
 class programinfo:
@@ -44,7 +45,7 @@ class programinfo:
         render = web.template.render('templates')
         if web.input()['ind']:
             ind = int(web.input()['ind'])
-            return render.programinfo(render.header(), render.footer(), programs[ind])
+            return render.programinfo(render.header(session.user), render.footer(), programs[ind])
         
 class listview:
     def GET(self):
@@ -85,17 +86,17 @@ class listview:
                 if not found_match:
                     filtered_backups.append(backup_results[i])
                 
-            return render.listview(render.header(), render.footer(), results, filtered_backups, category, zipcode)
+            return render.listview(render.header(session.user), render.footer(), results, filtered_backups, category, zipcode)
 
 class about:
     def GET(self):
         render = web.template.render('templates')
-        return render.about(render.header(), render.footer())
+        return render.about(render.header(session.user), render.footer())
 
 class contact:
     def GET(self):
         render = web.template.render('templates')
-        return render.contact(render.header(), render.footer())
+        return render.contact(render.header(session.user), render.footer())
 
 # User capabilities
 users = {'antonio' : 'baseball4ever', 'valerie' : 'password'}
@@ -105,7 +106,7 @@ class login:
         render = web.template.render('templates')
         error = False
         if session.user == 'anonymous':
-            return render.login(render.header(), render.footer(), error, session.user, render.login_form())
+            return render.login(render.header(session.user), render.footer(), error, session.user, render.login_form())
         else:
             raise web.seeother('/profile')
 
@@ -116,10 +117,10 @@ class login:
         error = False
         if not username in users: 
             error = "This user does not exist. Try again."
-            return render.login(render.header(), render.footer(), error, session.user, render.login_form())
+            return render.login(render.header(session.user), render.footer(), error, session.user, render.login_form())
         elif not username or not password: 
             error = "You must enter a username and a password"
-            return render.login(render.header(), render.footer(), error, session.user, render.login_form())
+            return render.login(render.header(session.user), render.footer(), error, session.user, render.login_form())
         elif username in users and users[username] == password:
             session.user = username
             raise web.seeother('/profile')
@@ -135,7 +136,7 @@ class profile:
         if session.user == 'anonymous':
             raise web.seeother('/login')
         else:
-            return render.profile(render.header(), render.footer(), session.user)
+            return render.profile(render.header(session.user), render.footer(), session.user)
 
 class saved:
     def GET(self):
@@ -148,13 +149,16 @@ class saved:
             for key in saved:
                 key['index'] = i
                 i += 1
-            return render.saved(render.header(), render.footer(), saved)    
+            return render.saved(render.header(session.user), render.footer(), saved)    
 
 class static:
     def GET(self, media, file):
         try:
             f = open(media+'/'+file, 'r')
-            return f.read()
+            val = f.read()
+            f.close()
+            return val
+
         except:
             return '' # you can send a 404 error here if you want
 

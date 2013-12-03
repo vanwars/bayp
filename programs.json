@@ -73,7 +73,7 @@
 		"address": "2781 Telegraph Ave, Oakland, CA 94612",
 		"zipcode": 94612,
 		"cost": 0,
-		"categories": "Tech"
+		"categories": "Tech",
 		"school": "Skyline High School",
 		"beg_date": "Jan 23",
 		"end_date": "Mar 15",
@@ -86,7 +86,7 @@
 		"short_desc": "The nonprofit, founded by Kimberly Bryant, aims to give girls access to good-paying professions with prestigious companies, as well as the ability to enter into the field as an entrepreneurs and leaders of technology.",
 		"zipcode": 94612,
 		"cost": 0,
-		"categories": "Tech"
+		"categories": "Tech",
 		"school": "Oakland Technical High School",
 		"beg_date": "Jan 23",
 		"end_date": "Mar 15",
@@ -101,7 +101,7 @@
 	  	"address": "Laney College Technology Center, 900 Fallon St, Oakland, CA 94607",
 		"zipcode": 94607,
 		"cost": 10,
-		"categories": "Tech"
+		"categories": "Tech",
 		"school": "Oakland Technical High School",
 		"beg_date": "Jan 23",
 		"end_date": "Mar 15",
@@ -114,7 +114,7 @@
 		"short_desc": "Digital Connectors program identifies talented young people, immersed them in technology training, and helped them build their leadership and workplace skills to enter the 21st century economy.",
 		"zipcode": 94607,
 		"cost": 0,
-		"categories": "Tech"
+		"categories": "Tech",
 		"school": "Oakland Technical High School",
 		"beg_date": "Feb 13",
 		"end_date": "Mar 15",
@@ -128,7 +128,7 @@
 		"short_desc": "The High School Explainers Program, high school students explain exhibits at the San Francisco Exploratorium to the public and conduct the various science demonstrations for the public.",
 		"zipcode": 94607,
 		"cost": 0,
-		"categories": "Tech"
+		"categories": "Tech",
 		"school": "Oakland Technical High School",
 		"beg_date": "Jan 23",
 		"end_date": "Mar 15",
@@ -141,7 +141,7 @@
 		"short_desc": "St. Vincent de Paul of Alameda County's Clothing Closet provides clothing to those in need.  Be a shopping partner! Help people pick out appropriate clothing and match items for fun, complete outfits.",
 		"zipcode": 94612,
 		"cost": 0,
-		"categories": "Community Service"
+		"categories": "Community Service",
 		"school": "Skyline High School",
 		"beg_date": "Feb 23",
 		"end_date": "Mar 15",
@@ -154,7 +154,7 @@
 		"short_desc": "Livermore American Indian Center is looking for someone who can tutor Spanish for a 9th grade high school student in the Livermore area. This would be a good opportunity for someone to share their Spanish language background.",
 		"zipcode": 94612,
 		"cost": 30,
-		"categories": "Community Service"
+		"categories": "Community Service",
 		"school": "Skyline High School",
 		"beg_date": "Jan 23",
 		"end_date": "Mar 15",
@@ -167,7 +167,7 @@
 		"short_desc": "Work in a beautiful outdoor setting with a great team of plant-loving people! Ruth Bancroft Garden Nursery Volunteers make a valuable contribution to the Garden by helping grow and maintain our collection of drought-tolerant plants.",
 		"zipcode": 94612,
 		"cost": 0,
-		"categories": "Community Service"
+		"categories": "Community Service",
 		"school": "Skyline High School",
 		"beg_date": "Jan 23",
 		"end_date": "Mar 15",
@@ -180,7 +180,7 @@
 		"short_desc": "Jumpstart will be partnering up with community based organizations (CBO) to bring children in Oakland an interactive reading and art project. Let's work together and make the holiday's extra special for the children!",
 		"zipcode": 94612,
 		"cost": 0,
-		"categories": "Community Service"
+		"categories": "Community Service",
 		"school": "Skyline High School",
 		"beg_date": "Jan 23",
 		"end_date": "Mar 15",
@@ -220,7 +220,7 @@
 		"contact_person": "Rosa Baeza",
 		"contact_title": "Community Engagement Manager",
 		"contact_phone": "(510) 877-9252",
-		"contact_email": "RosaB@svdp.org"
+		"contact_email": "RosaB@svdp.org",
 		"school": "Oakland Technical High School",
 		"beg_date": "Jan 23",
 		"end_date": "Mar 15",
@@ -240,7 +240,7 @@
 		"contact_person": "Jessica Bilsky",
 		"contact_title": "Community Engagement Manager",
 		"contact_phone": "(510) 877-9252",
-		"contact_email": "JessicaB@boostoakland.org"
+		"contact_email": "JessicaB@boostoakland.org",
 		"school": "Oakland Technical High School",
 		"beg_date": "Jan 29",
 		"end_date": "May 15",
@@ -253,7 +253,7 @@
 		"short_desc": "Jumpstart will be partnering up with community based organizations (CBO) to bring children in Oakland an interactive reading and art project. Let's work together and make the holiday's extra special for the children!",
 		"zipcode": 94612,
 		"cost": 0,
-		"categories": "Arts"
+		"categories": "Arts",
 		"school": "Skyline High School",
 		"beg_date": "Jan 23",
 		"end_date": "Mar 15",
@@ -266,7 +266,7 @@
 		"short_desc": "The East Bay Center for the Performing Arts has brought performing arts and new media classes to after-school programs.  We are drawing on the Center's diverse resources; our professional arts faculty and experienced educational staff; our multi-cultural offerings, both traditional and contemporary; and partnerships with other arts and social organizations.",
 		"zipcode": 94612,
 		"cost": 0,
-		"categories": "Arts"
+		"categories": "Arts",
 		"school": "Oakland Technical High School",
 		"beg_date": "Jan 23",
 		"end_date": "Mar 15",
@@ -279,7 +279,7 @@
 		"short_desc": "“Bye, Mom, I’m off to blacksmithing class.” It’s music to any sculpture-aficionado parent’s ear—and it’s for real. This West Oakland industrial fire arts facility has long been a mecca for makers. It’s where you go to play with fire, er, study techniques in neon, glass, and welding.",
 		"zipcode": 94612,
 		"cost": 0,
-		"categories": "Arts"
+		"categories": "Arts",
 		"school": "Skyline High School",
 		"beg_date": "Jan 23",
 		"end_date": "Mar 15",
@@ -292,7 +292,7 @@
 		"short_desc": "This long-running program teaches after-school visual arts, carpentry, clay, and more for tots through teens, right on the shores of Lake Merritt. The facility is a venture of the Junior League, Oakland’s Office of Parks and Recreation, and other groups.",
 		"zipcode": 94612,
 		"cost": 10,
-		"categories": "Arts"
+		"categories": "Arts",
 		"school": "Skyline High School",
 		"beg_date": "Feb 2",
 		"end_date": "Mar 25",
@@ -305,7 +305,7 @@
 		"short_desc": "From the very basics—infant footprint tiles—to technique-intensive skills like wheel-throwing, this lively studio stresses personal development, creative problem-solving skills, and fun. Not to mention Kids ’N’ Clay teachers theorize that pounding, squishing, rolling, and shaping wet clay go hand in hand with untethered imaginations.",
 		"zipcode": 94612,
 		"cost": 20,
-		"categories": "Arts"
+		"categories": "Arts",
 		"school": "Oakland Technical High School",
 		"beg_date": "Jan 23",
 		"end_date": "Mar 15",
@@ -318,7 +318,7 @@
 		"short_desc": "Professional actors, writers, directors, and technicians offer classes for youth and teens at the Tony Award–winning theater’s downtown Berkeley school. Teens can learn stage fighting, do improv, or pick up expert tips in acting on camera or preparing for an audition.",
 		"zipcode": 94612,
 		"cost": 0,
-		"categories": "Arts"
+		"categories": "Arts",
 		"school": "Oakland Technical High School",
 		"beg_date": "Jan 23",
 		"end_date": "Mar 15",

@@ -1,3 +1,5 @@
+$def with (user)
+
 <html>
   <head>
     <title>Bay Area Youth Project</title>
@@ -40,12 +42,25 @@
               <a id="search" href="#" role="button" class="dropdown-toggle"><span class="glyphicon glyphicon-search"></span> Search <b class="caret"></b></a>
             </li> -->
             <li id="account_menu" class='dropdown'>
-              <a href="/login" id="account" role="button" class='dropdown-toggle'><span class='glyphicon glyphicon-user'></span> My Bay-P <b class="caret"></b></a>
-              <ul class="dropdown-menu" role="menu" aria-labelledby="account">
-                <!-- <li role="presentation"><a role="menuitem" tabindex="-1" href="/profile"><span class="glyphicon glyphicon-cog"></span> Profile</a></li> -->
-                <!-- <li role="presentation"><a role="menuitem" tabindex="-1" href="/saved"><span class="glyphicon glyphicon-bookmark"></span> Saved Programs</a></li> -->
-                <li role="presentation" class="divider"></li>
-                <li role="presentation"><a role="menuitem" tabindex="-1" href="/login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+              $if user == 'anonymous':
+							    <a href="/login" id="account" role="button" class='dropdown-toggle'><span class='glyphicon glyphicon-user'></span> My Bay-P <b class="caret"></b></a>
+									
+              $if user != 'anonymous':
+							    <a id="account" role="button" class='dropdown-toggle'><span class='glyphicon glyphicon-user'></span> My Bay-P <b class="caret"></b></a><ul class="dropdown-menu" role="menu" aria-labelledby="account">
+
+              $if user != 'anonymous':
+									<li role="presentation"><a role="menuitem" tabindex="-1" href="/profile"><span class="glyphicon glyphicon-cog"></span> Profile</a></li> 
+              $if user != 'anonymous':
+							    <li role="presentation"><a role="menuitem" tabindex="-1" href="/saved"><span class="glyphicon glyphicon-bookmark"></span> Saved Programs</a></li>
+              
+							<li role="presentation" class="divider"></li>
+							
+							$if user == 'anonymous':
+							    <li role="presentation"><a role="menuitem" tabindex="-1" href="/login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>									
+
+              $if user != 'anonymous':
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="/logout"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
+
               </ul>
             </li>
           </ul>
