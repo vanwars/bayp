@@ -1,6 +1,12 @@
-$def with (header, footer, programs, backup_programs, category, zipcode)
+$def with (header, footer, programs, backup_programs, category, zipcode, session)
 $:header
 
+<script>
+function favorite(id) {
+	console.log("favorite?id=" + id);
+	$$.get( "favorite?id=" + id );
+}
+</script>
 
 <div class="container listview">
   <div class="row">
@@ -18,14 +24,14 @@ $:header
                   <h4 class="group inner list-group-item-heading">
                    <a href="programinfo?ind=$program['index']">$program['name']</a>
                   </h4>
-                <address><strong>Neighborhood: West Oakland<br>1234 Oak Street</strong></address>
+                <address><strong>Neighborhood: West Oakland<br>$program['address']</strong></address>
                 <ul class="list-inline">
                   <li><a href="programinfo.html"><span class="glyphicon glyphicon-usd"></span> Price: </a></li>
 		  <li><small><span class="glyphicon glyphicon-calendar">:
                                 </span></small></li>
 
                   <li class='bookmark'>
-                    <a href='#' class='bookmark' data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-bookmark"></span>
+                    <a href='#' onclick="favorite($program['index'])" class='bookmark' data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-bookmark"></span>
                       Save Program
                     </a>
                   </li>
@@ -54,7 +60,7 @@ $:header
                   <h4 class="group inner list-group-item-heading">
                    <a href="programinfo?ind=$program['index']">$program['name']</a>
                   </h4>
-                <address><strong>Neighborhood: West Oakland<br>1234 Oak Street</strong></address>
+                <address><strong>Neighborhood: West Oakland<br>$program['address']</strong></address>
                 <p class="group inner list-group-item-text"> $program['short_desc']</p><br>
                 <ul class="list-inline">
                   <li><a href="programinfo.html"><span class="glyphicon glyphicon-usd"></span> Price: </a></li>

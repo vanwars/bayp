@@ -15,6 +15,7 @@ urls = (
     '/register', 'register',
     '/profile', 'profile',
     '/saved', 'saved',
+    '/favorite', 'favorite',
     '/(js|css|images|fonts)/(.*)', 'static',
 )
 
@@ -33,7 +34,15 @@ class index:
     def GET(self):
         render = web.template.render('templates')
         return render.index(render.header(session.user), render.footer(), session.user)
-        
+       
+class favorite:
+    def GET(self):
+        ind = int(web.input()['id'])
+        try:
+            session['favorites'].append(programs[ind])
+        except KeyError:
+            session['favorites'] = [programs[ind]]
+            
 class categories:
     def GET(self):
         render = web.template.render('templates')
@@ -86,7 +95,7 @@ class listview:
                 if not found_match:
                     filtered_backups.append(backup_results[i])
                 
-            return render.listview(render.header(session.user), render.footer(), results, filtered_backups, category, zipcode)
+            return render.listview(render.header(session.user), render.footer(), results, filtered_backups, category, zipcode, session)
 
 class about:
     def GET(self):
@@ -149,7 +158,15 @@ class saved:
             for key in saved:
                 key['index'] = i
                 i += 1
-            return render.saved(render.header(session.user), render.footer(), saved)    
+            
+            try:
+                favorites = session['favorites']
+                for i in xrange(len(favorites)):
+                    favorites[i]['index'] = i
+            except KeyError:
+                favorites = []
+                
+            return render.saved(render.header(session.user), render.footer(), favorites)    
 
 class static:
     def GET(self, media, file):
