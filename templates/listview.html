@@ -1,4 +1,4 @@
-$def with (header, footer, programs, backup_programs, category, zipcode, session)
+$def with (header, footer, programs, backup_programs, category, zipcode, session, not_logged_in)
 $:header
 
 <script>
@@ -7,7 +7,6 @@ function favorite(id) {
 	$$.get( "favorite?id=" + id );
 }
 </script>
-
 <div class="container listview">
   <div class="row">
     <div class="col-xs-12 col-md-12">
@@ -29,16 +28,33 @@ function favorite(id) {
                   <li><a href="programinfo.html"><span class="glyphicon glyphicon-usd"></span> Price: </a></li>
 		  <li><small><span class="glyphicon glyphicon-calendar">:
                                 </span></small></li>
+              <!-- Saving Programs -->
+              $if session == 'anonymous':    
+                  <li>
+                    <a href='#' data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-bookmark"></span>
+                      Save Program
+                    </a>
+                  </li>
+                  $:not_logged_in
 
+              $if session != 'anonymous':
                   <li class='bookmark'>
-                    <a href='#' onclick="favorite($program['index'])" class='bookmark' data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-bookmark"></span>
+                    <a href='#' class='bookmark' data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-bookmark"></span>
                       Save Program
                     </a>
                   </li>
                   <li class='success'>Success!</li>
                   
                 </ul>
-              <span class="glyphicon glyphicon-thumbs-up"><small> 43 Recommend This</small></span></li>
+              <!-- Recommendations -->
+              $if session == 'anonymous':    
+                  <a href='' data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-thumbs-up"></span></a><small> 43 Recommend This</small>
+                  $:not_logged_in
+
+              $if session != 'anonymous':
+                  <a href='' class='recommend' data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-thumbs-up"></span></a><small> <span class="recommendations">43</span> Recommend This</small>
+                  <a class='success'>+1</a>
+          </li>
         </ol><!-- end ordered list-->
     </div><!-- program results -->
   </div><!-- row -->
@@ -66,6 +82,16 @@ function favorite(id) {
                   <li><a href="programinfo.html"><span class="glyphicon glyphicon-usd"></span> Price: </a></li>
 		  <li><small><span class="glyphicon glyphicon-calendar">:
                                 </span></small></li>
+                  
+              $if session == 'anonymous':    
+                  <li>
+                    <a href='#' data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-bookmark"></span>
+                      Save Program
+                    </a>
+                  </li>
+                  $:not_logged_in
+
+              $if session != 'anonymous':
                   <li class='bookmark'>
                     <a href='#' class='bookmark' data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-bookmark"></span>
                       Save Program
@@ -74,7 +100,16 @@ function favorite(id) {
                   <li class='success'>Success!</li>
                   
                 </ul>
-              <span class="glyphicon glyphicon-thumbs-up"><small> 43 Recommend This</small></span></li>
+                
+              <!-- Recommendations -->
+              $if session == 'anonymous':    
+                  <a href='' data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-thumbs-up"></span></a><small> 43 Recommend This</small>
+                  $:not_logged_in
+
+              $if session != 'anonymous':
+                  <a href='' class='recommend' data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-thumbs-up"></span></a><small> <span class="recommendations">43</span> Recommend This</small>
+                  <a class='success'>+1</a>
+
         </ol><!-- end ordered list-->
     </div><!-- program results -->
   </div><!-- row -->
