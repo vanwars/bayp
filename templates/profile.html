@@ -39,7 +39,14 @@ $:header
 			            $for program in saved:
 			                <li style="border-bottom: groove 1px; padding: 15px 0px;">
 			                <h4 class="group inner list-group-item-heading">
-			                <a href="programinfo?ind=$program['index']">$program['name']</a></h4><address><strong>Neighborhood: West Oakland<br>$program['address']</strong></address><p class="group inner list-group-item-text"> $program['short_desc']</p><br><ul class="list-inline"><li><a href="programinfo.html"><span class="glyphicon glyphicon-usd"></span> Price: </a></li></ul><span class="glyphicon glyphicon-thumbs-up"><small> 43 Recommend This</small></span></li>
+			                <a href="programinfo?ind=$program['index']">$program['name']</a></h4><address><strong>Neighborhood: West Oakland<br>$program['address']</strong></address><p class="group inner list-group-item-text"> $program['short_desc']</p><br><ul class="list-inline"><li><a href="programinfo.html"><span class="glyphicon glyphicon-usd"></span> Price: </a></li>
+
+				              <!-- Recommendations -->
+				              $if username != 'anonymous':
+				                  <a href='' class='recommend' data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-thumbs-up"></span></a><small> <span class="recommendations">43</span> Recommend This</small>
+				                  <a class='success'>+1</a>
+				            </ul>
+
 			        </ol><!-- end ordered list-->
 			    $else:
 			    	<h1 class='empty'>You haven't saved any programs yet. <a href='/'>Browse programs</a>.</h1>

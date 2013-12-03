@@ -39,7 +39,7 @@ function favorite(id) {
 
               $if session != 'anonymous':
                   <li class='bookmark'>
-                    <a href='#' class='bookmark' data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-bookmark"></span>
+                    <a href='#'  onclick="favorite($program['index'])" class='bookmark' data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-bookmark"></span>
                       Save Program
                     </a>
                   </li>
@@ -93,7 +93,7 @@ function favorite(id) {
 
               $if session != 'anonymous':
                   <li class='bookmark'>
-                    <a href='#' class='bookmark' data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-bookmark"></span>
+                    <a href='#'  onclick="favorite($program['index'])" class='bookmark' data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-bookmark"></span>
                       Save Program
                     </a>
                   </li>

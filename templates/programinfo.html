@@ -1,4 +1,4 @@
-$def with (header, footer, program)
+$def with (header, footer, program, session, not_logged_in)
 $:header
     <div class="container programinfo">
         <div class="col-xs-12 col-md-12">
@@ -50,15 +50,27 @@ $:header
 
                         <div class="col-xs-12 col-md-4">
                             <div class="row">
-                                <p class="stats"><a href="/"><span class="glyphicon glyphicon-thumbs-up"></a></span><strong> 43 Recommend This </strong></p>
+                                <!-- Recommendations -->
+                                $if session == 'anonymous':
+                                    <p class="stats"><a href="" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-thumbs-up"></a></span><strong> <span class='recommendations'>43</span> Recommend This </strong></p>
+                                    $:not_logged_in
+                                $else:
+                                    <p class="stats"><a href="" class='single-rec'><span class="glyphicon glyphicon-thumbs-up"></a></span><strong> <span class='recommendations'>43</span> Recommend This </strong><a class='success'>+1</a></p>
+                                    
+
+
                                 <p class="stats"><strong>Category: </strong><span class="label label-default"> $program['categories']</span></p>
                                 <p class="stats"><span class="glyphicon glyphicon-usd"></span><strong> Price: </strong> Free </p>
                                 <p class="stats"><span class="glyphicon glyphicon-calendar"></span><strong> Date & Time: </strong><br>Tuesdays & Thursdays<br> 6:00PM - 7:30PM <br>12/03/2013 - 01/14/2014 </p>             
                                 <div class="btn-group btn-group-justified" style="padding-bottom: 10px;">
 
                                     <a class="btn btn-primary" role="button"><strong> Request Info </strong></a>
-                                    <a class="btn btn-primary" role="button"><span class="glyphicon glyphicon-bookmark"></span><strong> Save Program </strong>
-                                    </a>
+                                    
+                                  <!-- Saving Programs -->
+                                    <a class="btn btn-primary single-save" data-toggle="modal" data-target="#myModal" role="button"><span class="glyphicon glyphicon-bookmark"></span><strong> Save Program </strong></a>
+                                    $if session == 'anonymous':       
+                                        $:not_logged_in
+                                    
                                     
                                 </div>
 
