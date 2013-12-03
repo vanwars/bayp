@@ -12,7 +12,7 @@ $:header
             $for program in programs:
                 <li style="border-bottom: groove 1px; padding: 15px 0px;">
                 <h4 class="group inner list-group-item-heading">
-                <a href="programinfo?ind=$program['index']">$program['name']</a></h4><address><strong>Neighborhood: West Oakland<br>1234 Oak Street</strong></address><p class="group inner list-group-item-text"> $program['short_desc']</p><br><ul class="list-inline"><li><a href="programinfo.html"><span class="glyphicon glyphicon-usd"></span> Price: </a></li><li><a href="/"><span class="glyphicon glyphicon-bookmark"></span> Save Program</a><li></ul><span class="glyphicon glyphicon-thumbs-up"><small> 43 Recommend This</small></span></li>
+                <a href="programinfo?ind=$program['index']">$program['name']</a></h4><address><strong>Neighborhood: West Oakland<br>$program['address']</strong></address><p class="group inner list-group-item-text"> $program['short_desc']</p><br><ul class="list-inline"><li><a href="programinfo.html"><span class="glyphicon glyphicon-usd"></span> Price: </a></li></ul><span class="glyphicon glyphicon-thumbs-up"><small> 43 Recommend This</small></span></li>
         </ol><!-- end ordered list-->
     </div><!-- program results -->
   </div><!-- row -->
