@@ -31,7 +31,7 @@ else:
 class index:
     def GET(self):
         render = web.template.render('templates')
-        return render.index(render.header(), render.footer())
+        return render.index(render.header(), render.footer(), session.user)
         
 class categories:
     def GET(self):
