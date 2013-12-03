@@ -93,7 +93,10 @@ class listview:
                     except IndexError:
                         continue
                 if not found_match:
-                    filtered_backups.append(backup_results[i])
+                    try:
+                        filtered_backups.append(backup_results[i])
+                    except IndexError:
+                        continue
                 
             return render.listview(render.header(session.user), render.footer(), results, filtered_backups, category, zipcode, session)
 
