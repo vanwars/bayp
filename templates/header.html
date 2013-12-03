@@ -13,7 +13,7 @@ $def with (user)
     <link href="css/listview.css" rel="stylesheet" media="screen">
     <link href="css/programinfo.css" rel="stylesheet" media="screen">
     <link href="css/about.css" rel="stylesheet" media="screen">
-    <link href="css/saved.css" rel="stylesheet" media="screen">
+    <link href="css/profile.css" rel="stylesheet" media="screen">
   </head>
   
  <body>
@@ -38,31 +38,23 @@ $def with (user)
             </li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
-<!--             <li class="dropdown">
-              <a id="search" href="#" role="button" class="dropdown-toggle"><span class="glyphicon glyphicon-search"></span> Search <b class="caret"></b></a>
-            </li> -->
-            <li id="account_menu" class='dropdown'>
-              $if user == 'anonymous':
-							    <a href="/login" id="account" role="button" class='dropdown-toggle'><span class='glyphicon glyphicon-user'></span> My Bay-P <b class="caret"></b></a>
-									
-              $if user != 'anonymous':
-							    <a id="account" role="button" class='dropdown-toggle'><span class='glyphicon glyphicon-user'></span> My Bay-P <b class="caret"></b></a><ul class="dropdown-menu" role="menu" aria-labelledby="account">
-
-              $if user != 'anonymous':
-									<li role="presentation"><a role="menuitem" tabindex="-1" href="/profile"><span class="glyphicon glyphicon-cog"></span> Profile</a></li> 
-              $if user != 'anonymous':
-							    <li role="presentation"><a role="menuitem" tabindex="-1" href="/saved"><span class="glyphicon glyphicon-bookmark"></span> Saved Programs</a></li>
-              
-							<li role="presentation" class="divider"></li>
-							
-							$if user == 'anonymous':
-							    <li role="presentation"><a role="menuitem" tabindex="-1" href="/login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>									
-
-              $if user != 'anonymous':
-                  <li role="presentation"><a role="menuitem" tabindex="-1" href="/logout"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
-
-              </ul>
-            </li>
+            $if user == 'anonymous':
+                <li id="account_menu"><a href="/login" id="account" role="button"><span class='glyphicon glyphicon-log-in'></span> Login </a></li>
+            $else:
+                <li id="account_menu">
+                  <a href="/login" id="account" role="button" class='dropdown-toggle'>
+                    <span class='glyphicon glyphicon-user'></span> $user's BAY-P <b class="caret"></b>
+                  </a>
+                  <ul class="dropdown-menu" role="menu" aria-labelledby="account">
+                    <li role="presentation">
+                      <a role="menuitem" tabindex="-1" href="/profile"><span class="glyphicon glyphicon-cog"></span> Profile</a>
+                    </li> 
+                    <li role="presentation" class="divider"></li>               
+                    <li role="presentation">
+                      <a role="menuitem" tabindex="-1" href="/logout"><span class="glyphicon glyphicon-log-in"></span> Logout</a>
+                    </li>
+                  </ul>
+                </li>
           </ul>
         </div><!-- /.nav-collapse -->
       </nav> <!-- /navbar-example -->

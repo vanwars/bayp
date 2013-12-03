@@ -1,6 +1,49 @@
-$def with (header, footer, session)
+$def with (header, footer, saved, username)
 $:header
+<div class="container">
+	<div class="row header">
+		<h1>$username's BAY-P</h1>
+	</div>
+	<div class='row profile'>
+	    <div class="col-xs-12 col-md-4 pic">
+		    <img src="/images/$username-profile.png">
+	    </div>
+		$if username == 'ayana':
+		    <div class="col-xs-12 col-md-8">
+	    		<p><span>Name:</span> Ayana Smith</p>
+	    		<p><span>Birthday:</span> October 24, 1997</p>
+	    		<p><span>Age:</span> 16</p>
+	    		<p><span>School:</span> Oakland Tech</p>
+	    		<p class='interests'><span>Interests: </span><span class='label'>Art</span>, <span class='label'>Community Service</span></p>
+			</div>
+		$if username == 'robert':
+		    <div class="col-xs-12 col-md-8">
+	    		<p><span>Name:</span> Robert Gomez</p>
+	    		<p><span>Birthday:</span> November 28, 1996</p>
+	    		<p><span>Age:</span> 17</p>
+	    		<p><span>School:</span> Skyline High School</p>
+	    		<p class='interests'><span>Interests: </span><span class='label'>Sports</span>, <span class='label'>Community Service</span></p>
+			</div>
+	</div><!-- profile row -->
+	<div class='row saved'>
+		<div class="col-xs-12 col-md-12">
+			<div class='row'>
+				<div class = 'col-xs-12 col-md-12'><h2>Saved Programs</h2></div>
+			</div>
+			<div class='row'>
+				<div class= 'col-xs-12 col-md-12'>
+			        <ol>
+			            $for program in saved:
+			                <li style="border-bottom: groove 1px; padding: 15px 0px;">
+			                <h4 class="group inner list-group-item-heading">
+			                <a href="programinfo?ind=$program['index']">$program['name']</a></h4><address><strong>Neighborhood: West Oakland<br>$program['address']</strong></address><p class="group inner list-group-item-text"> $program['short_desc']</p><br><ul class="list-inline"><li><a href="programinfo.html"><span class="glyphicon glyphicon-usd"></span> Price: </a></li></ul><span class="glyphicon glyphicon-thumbs-up"><small> 43 Recommend This</small></span></li>
+			        </ol><!-- end ordered list-->
+			    </div><!-- program results -->
+			</div>
+		</div>
+	</div><!-- saved row -->
+</div><!-- container -->
 
-<h1>$session Settings Page</h1>
+
 
 $:footer

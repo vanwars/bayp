@@ -1,15 +1,15 @@
-$def with (header, footer, programs)
+$def with (header, footer, saved, username)
 $:header
 <div class="container saved">
   <div class="row">
     <div class="col-xs-12 col-md-12">
-        <h4><span class="glyphicon glyphicon-bookmark"><span class='label'>Saved</span> programs for <span class='label'>Antonio</span>.</h4>
+        <h4>username's Settings</h4>
     </div><!-- program results -->
   </div><!-- row -->
   <div class="row">
     <div class="col-xs-12 col-md-12">
         <ol>
-            $for program in programs:
+            $for program in saved:
                 <li style="border-bottom: groove 1px; padding: 15px 0px;">
                 <h4 class="group inner list-group-item-heading">
                 <a href="programinfo?ind=$program['index']">$program['name']</a></h4><address><strong>Neighborhood: West Oakland<br>$program['address']</strong></address><p class="group inner list-group-item-text"> $program['short_desc']</p><br><ul class="list-inline"><li><a href="programinfo.html"><span class="glyphicon glyphicon-usd"></span> Price: </a></li></ul><span class="glyphicon glyphicon-thumbs-up"><small> 43 Recommend This</small></span></li>

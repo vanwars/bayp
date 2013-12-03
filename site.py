@@ -14,7 +14,6 @@ urls = (
     '/logout', 'logout',
     '/register', 'register',
     '/profile', 'profile',
-    '/saved', 'saved',
     '/favorite', 'favorite',
     '/(js|css|images|fonts)/(.*)', 'static',
 )
@@ -111,7 +110,7 @@ class contact:
         return render.contact(render.header(session.user), render.footer())
 
 # User capabilities
-users = {'antonio' : 'baseball4ever', 'valerie' : 'password'}
+users = {'robert' : 'password', 'ayana' : 'password'}
 
 class login:
     def GET(self):
@@ -148,14 +147,6 @@ class profile:
         if session.user == 'anonymous':
             raise web.seeother('/login')
         else:
-            return render.profile(render.header(session.user), render.footer(), session.user)
-
-class saved:
-    def GET(self):
-        render = web.template.render('templates')
-        if session.user == 'anonymous':
-            raise web.seeother('/login')
-        else:
             saved = programs[0:3]
             i = 1
             for key in saved:
@@ -169,7 +160,7 @@ class saved:
             except KeyError:
                 favorites = []
                 
-            return render.saved(render.header(session.user), render.footer(), favorites)    
+            return render.profile(render.header(session.user), render.footer(), favorites, session.user)    
 
 class static:
     def GET(self, media, file):
