@@ -1,6 +1,5 @@
+$('.success').hide();
 $('#myModal').modal(options);
-
-$('li.success').hide();
 
 $('li.bookmark').click(function(){
 	if($(this).children('a').hasClass('success')) {
@@ -11,3 +10,4 @@ $('li.bookmark').click(function(){
 	}
 	$(this).children('a').toggleClass('success')
 });
+

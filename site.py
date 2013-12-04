@@ -53,7 +53,7 @@ class programinfo:
         render = web.template.render('templates')
         if web.input()['ind']:
             ind = int(web.input()['ind'])
-            return render.programinfo(render.header(session.user), render.footer(), programs[ind])
+            return render.programinfo(render.header(session.user), render.footer(), programs[ind], session.user, render.not_logged_in())
         
 class listview:
     def GET(self):
