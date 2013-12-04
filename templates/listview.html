@@ -1,4 +1,4 @@
-$def with (header, footer, programs, backup_programs, category, zipcode, session, not_logged_in)
+$def with (header, footer, programs, backup_programs, category, zipcode, session, all_programs)
 $:header
 
 <script>
@@ -7,6 +7,7 @@ function favorite(id) {
 	$$.get( "favorite?id=" + id );
 }
 </script>
+
 <div class="container listview">
   <div class="row">
     <div class="col-xs-12 col-md-12">
@@ -23,38 +24,24 @@ function favorite(id) {
                   <h4 class="group inner list-group-item-heading">
                    <a href="programinfo?ind=$program['index']">$program['name']</a>
                   </h4>
-                <address><strong>Neighborhood: West Oakland<br>$program['address']</strong></address>
+                <address><strong>Neighborhood: West Oakland<br>$program['address']<br />
+								Nearest High School: $all_programs[int(program['index'])]['school']</strong></address>
+								
                 <ul class="list-inline">
-                  <li><a href="programinfo.html"><span class="glyphicon glyphicon-usd"></span> Price: </a></li>
-		  <li><small><span class="glyphicon glyphicon-calendar">:
+                  <li><a href="programinfo.html">
+										<!--<span class="glyphicon glyphicon-usd"></span> --> Price: $$$all_programs[int(program['index'])]['cost'] </a></li>
+		  <li><small><span class="glyphicon glyphicon-calendar">: $all_programs[int(program['index'])]['time']
                                 </span></small></li>
-              <!-- Saving Programs -->
-              $if session == 'anonymous':    
-                  <li>
-                    <a href='#' data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-bookmark"></span>
-                      Save Program
-                    </a>
-                  </li>
-                  $:not_logged_in
 
-              $if session != 'anonymous':
                   <li class='bookmark'>
-                    <a href='#'  onclick="favorite($program['index'])" class='bookmark' data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-bookmark"></span>
+                    <a href='#' onclick="favorite($program['index'])" class='bookmark' data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-bookmark"></span>
                       Save Program
                     </a>
                   </li>
                   <li class='success'>Success!</li>
                   
                 </ul>
-              <!-- Recommendations -->
-              $if session == 'anonymous':    
-                  <a href='' data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-thumbs-up"></span></a><small> 43 Recommend This</small>
-                  $:not_logged_in
-
-              $if session != 'anonymous':
-                  <a href='' class='recommend' data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-thumbs-up"></span></a><small> <span class="recommendations">43</span> Recommend This</small>
-                  <a class='success'>+1</a>
-          </li>
+              <span class="glyphicon glyphicon-thumbs-up"><small> $all_programs[int(program['index'])]['likes'] Recommend This</small></span></li>
         </ol><!-- end ordered list-->
     </div><!-- program results -->
   </div><!-- row -->
@@ -64,9 +51,10 @@ function favorite(id) {
 <div class="container listview">
   <div class="row">
     <div class="col-xs-12 col-md-12">
-        <h4>Other programs near you.</h4>
-    </div><!-- program results -->
+        <h4>Other programs that may be related to your search.</h4>
+    </div><!--program category and zip code header -->
   </div><!-- row -->
+ <div style="background-color: #F7F7F7; padding-top: 15px;">
   <div class="row">
     <div class="col-xs-12 col-md-12">
         <ol>
@@ -76,43 +64,27 @@ function favorite(id) {
                   <h4 class="group inner list-group-item-heading">
                    <a href="programinfo?ind=$program['index']">$program['name']</a>
                   </h4>
-                <address><strong>Neighborhood: West Oakland<br>$program['address']</strong></address>
-                <p class="group inner list-group-item-text"> $program['short_desc']</p><br>
+                <address><strong>Neighborhood: West Oakland<br>$program['address']<br />
+								Nearest High School: $all_programs[int(program['index'])]['school']</strong></address>
+								
                 <ul class="list-inline">
-                  <li><a href="programinfo.html"><span class="glyphicon glyphicon-usd"></span> Price: </a></li>
-		  <li><small><span class="glyphicon glyphicon-calendar">:
+                  <li><a href="programinfo.html">
+										<!--<span class="glyphicon glyphicon-usd"></span> --> Price: $$$all_programs[int(program['index'])]['cost'] </a></li>
+		  <li><small><span class="glyphicon glyphicon-calendar">: $all_programs[int(program['index'])]['time']
                                 </span></small></li>
-                  
-              $if session == 'anonymous':    
-                  <li>
-                    <a href='#' data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-bookmark"></span>
-                      Save Program
-                    </a>
-                  </li>
-                  $:not_logged_in
 
-              $if session != 'anonymous':
                   <li class='bookmark'>
-                    <a href='#'  onclick="favorite($program['index'])" class='bookmark' data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-bookmark"></span>
+                    <a href='#' onclick="favorite($program['index'])" class='bookmark' data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-bookmark"></span>
                       Save Program
                     </a>
                   </li>
                   <li class='success'>Success!</li>
                   
                 </ul>
-                
-              <!-- Recommendations -->
-              $if session == 'anonymous':    
-                  <a href='' data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-thumbs-up"></span></a><small> 43 Recommend This</small>
-                  $:not_logged_in
-
-              $if session != 'anonymous':
-                  <a href='' class='recommend' data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-thumbs-up"></span></a><small> <span class="recommendations">43</span> Recommend This</small>
-                  <a class='success'>+1</a>
-
+              <span class="glyphicon glyphicon-thumbs-up"><small> $all_programs[int(program['index'])]['likes'] Recommend This</small></span></li>
         </ol><!-- end ordered list-->
     </div><!-- program results -->
   </div><!-- row -->
+ </div><!--results div stlye -->
 </div><!-- container -->
-
 $:footer

@@ -53,7 +53,7 @@ class programinfo:
         render = web.template.render('templates')
         if web.input()['ind']:
             ind = int(web.input()['ind'])
-            return render.programinfo(render.header(session.user), render.footer(), programs[ind], session.user, render.not_logged_in())
+            return render.programinfo(render.header(session.user), render.footer(), programs[ind])
         
 class listview:
     def GET(self):
@@ -76,8 +76,22 @@ class listview:
             if len(backup_results) == 0:
                 backup_query = QueryParser("category", search_index.schema).parse("*")
                 backup_results = searcher.search(backup_query)
+            
+            query = ""
+            
+            try:
+                int(web.input()['zip'])
+                query = QueryParser("category", search_index.schema).parse("zipcode:"+zipcode+" "+category)
+                print "query: ", "zipcode:"+zipcode+" "+category
+            except ValueError:
+                print "found a school query"
+                if category == "":
+                    query = QueryParser("school", search_index.schema).parse(""+zipcode)
+                else:
+                    print "reaching HERE"
+                    query = QueryParser("school", search_index.schema).parse("category:"+category+" "+zipcode)
+                print "query: ", ""+zipcode+" category:"+category
                 
-            query = QueryParser("category", search_index.schema).parse("zipcode:"+zipcode+" "+category)
             results = searcher.search(query)
             
             filtered_backups = []
@@ -97,7 +111,7 @@ class listview:
                     except IndexError:
                         continue
                 
-            return render.listview(render.header(session.user), render.footer(), results, filtered_backups, category, zipcode, session.user, render.not_logged_in())
+            return render.listview(render.header(session.user), render.footer(), results, filtered_backups, category, zipcode, session, programs)
 
 class about:
     def GET(self):
@@ -152,6 +166,7 @@ class profile:
             for key in saved:
                 key['index'] = i
                 i += 1
+            
             try:
                 favorites = session['favorites']
                 for i in xrange(len(favorites)):

@@ -40,11 +40,6 @@
 	border-radius: 6px;
 }
 
-.saved h1.empty {
-	color: #999;
-	font-weight: normal;
-}
-
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: @screen-md-min) {
 

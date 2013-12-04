@@ -1,4 +1,4 @@
-$def with (header, footer, program, session, not_logged_in)
+$def with (header, footer, program)
 $:header
     <div class="container programinfo">
         <div class="col-xs-12 col-md-12">
@@ -50,27 +50,23 @@ $:header
 
                         <div class="col-xs-12 col-md-4">
                             <div class="row">
-                                <!-- Recommendations -->
-                                $if session == 'anonymous':
-                                    <p class="stats"><a href="" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-thumbs-up"></a></span><strong> <span class='recommendations'>43</span> Recommend This </strong></p>
-                                    $:not_logged_in
-                                $else:
-                                    <p class="stats"><a href="" class='single-rec'><span class="glyphicon glyphicon-thumbs-up"></a></span><strong> <span class='recommendations'>43</span> Recommend This </strong><a class='success'>+1</a></p>
-                                    
-
-
+                                <p class="stats"><a href="/"><span class="glyphicon glyphicon-thumbs-up"></a></span><strong> $program['likes'] Recommend This </strong></p>
                                 <p class="stats"><strong>Category: </strong><span class="label label-default"> $program['categories']</span></p>
-                                <p class="stats"><span class="glyphicon glyphicon-usd"></span><strong> Price: </strong> Free </p>
-                                <p class="stats"><span class="glyphicon glyphicon-calendar"></span><strong> Date & Time: </strong><br>Tuesdays & Thursdays<br> 6:00PM - 7:30PM <br>12/03/2013 - 01/14/2014 </p>             
+                               <p class="stats"><!--<span class="glyphicon glyphicon-usd"></span>--><strong> Price: </strong> 
+																	$if program['cost'] == 0:
+																	    Free 
+																	$else:
+																	    $$$program['cost']  
+																																				
+														</p>
+                                <p class="stats"><span class="glyphicon glyphicon-calendar"></span><strong> Date & Time: </strong>
+																	<br> <!-- Tuesdays & Thursdays<br> 6:00PM - 7:30PM <br>12/03/2013 - 01/14/2014 --> $program['time'] 
+																	<br> $program['beg_date'] - $program['end_date']</p>             
                                 <div class="btn-group btn-group-justified" style="padding-bottom: 10px;">
 
                                     <a class="btn btn-primary" role="button"><strong> Request Info </strong></a>
-                                    
-                                  <!-- Saving Programs -->
-                                    <a class="btn btn-primary single-save" data-toggle="modal" data-target="#myModal" role="button"><span class="glyphicon glyphicon-bookmark"></span><strong> Save Program </strong></a>
-                                    $if session == 'anonymous':       
-                                        $:not_logged_in
-                                    
+                                    <a class="btn btn-primary" role="button"><span class="glyphicon glyphicon-bookmark"></span><strong> Save Program </strong>
+                                    </a>
                                     
                                 </div>
 
@@ -88,19 +84,26 @@ $:header
                         </div><!-- /main_photo-->
 
                         <div class="col-xs-12 col-md-4">
-                            <div class="row">
-                                <p class="stats"><a href="/"><span class="glyphicon glyphicon-thumbs-up"></a></span><strong> 43 Recommend This </strong></p>
-                                <p class="stats"><strong>Category: </strong><span class="label label-default"> $program['categories']</span></p>
-                                <p class="stats"><span class="glyphicon glyphicon-usd"></span><strong> Price: </strong> Free </p>
-                                <p class="stats"><span class="glyphicon glyphicon-calendar"></span><strong> Date & Time: </strong><br>Tuesdays & Thursdays<br> 6:00PM - 7:30PM <br>12/03/2013 - 01/14/2014 </p>             
-                                <div class="btn-group btn-group-justified" style="padding-bottom: 10px;">
+                          <div class="row">
+                              <p class="stats"><a href="/"><span class="glyphicon glyphicon-thumbs-up"></a></span><strong> $program['likes'] Recommend This </strong></p>
+                              <p class="stats"><strong>Category: </strong><span class="label label-default"> $program['categories']</span></p>
+                             <p class="stats"><!--<span class="glyphicon glyphicon-usd"></span>--><strong> Price: </strong> 
+																$if program['cost'] == 0:
+																    Free 
+																$else:
+																    $$$program['cost']  
+																																			
+													</p>
+                              <p class="stats"><span class="glyphicon glyphicon-calendar"></span><strong> Date & Time: </strong>
+																<br> <!-- Tuesdays & Thursdays<br> 6:00PM - 7:30PM <br>12/03/2013 - 01/14/2014 --> $program['time'] 
+																<br> $program['beg_date'] - $program['end_date']</p>             
+                              <div class="btn-group btn-group-justified" style="padding-bottom: 10px;">
 
-                                    <a class="btn btn-primary" role="button"><strong> Request Info </strong></a>
-                                    <a class="btn btn-primary" role="button"><span class="glyphicon glyphicon-bookmark"></span><strong> Save Program </strong>
-                                    </a>
-                                    
-                                </div>
-
+                                  <a class="btn btn-primary" role="button"><strong> Request Info </strong></a>
+                                  <a class="btn btn-primary" role="button"><span class="glyphicon glyphicon-bookmark"></span><strong> Save Program </strong>
+                                  </a>
+                                  
+                              </div>
 
                                 <div class="stats">
                                     <strong>Directions</strong>
@@ -151,16 +154,7 @@ $:header
 
 
                 <div class="media">
-                    $if 'contact_person' in program: <a class="pull-left" href=
-                    "#"><img alt="staff" class="media-object" src=
-                    "/images/staff.jpg"></a>
-
-                    <div class="media-body">
-                        <h4 class="media-heading">
-                        $program['contact_person']</h4>
-
-                        <p><strong>$program['contact_title']</strong><br>
-                        $program['contact_phone']</p>
+                    $if 'contact_person' in program: <a class="pull-left" href="#"><img alt="staff" class="media-object" src="/images/staff.jpg"></a><div class="media-body"><h4 class="media-heading">$program['contact_person']</h4><p><strong>$program['contact_title']</strong><br>$program['contact_phone']</p>
                     </div><!--media body-->
                 </div><!--media-->
             </div>

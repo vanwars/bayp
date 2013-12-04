@@ -2,9 +2,7 @@ $def with (header, footer, saved, username)
 $:header
 <div class="container">
 	<div class="row header">
-		<div class='col-xs-12 col-md-12'>
-			<h1>$username's BAY-P</h1>
-		</div>
+		<h1>$username's BAY-P</h1>
 	</div>
 	<div class='row profile'>
 	    <div class="col-xs-12 col-md-4 pic">
@@ -34,22 +32,12 @@ $:header
 			</div>
 			<div class='row'>
 				<div class= 'col-xs-12 col-md-12'>
-				$if saved:
 			        <ol>
 			            $for program in saved:
 			                <li style="border-bottom: groove 1px; padding: 15px 0px;">
 			                <h4 class="group inner list-group-item-heading">
-			                <a href="programinfo?ind=$program['index']">$program['name']</a></h4><address><strong>Neighborhood: West Oakland<br>$program['address']</strong></address><p class="group inner list-group-item-text"> $program['short_desc']</p><br><ul class="list-inline"><li><a href="programinfo.html"><span class="glyphicon glyphicon-usd"></span> Price: </a></li>
-
-				              <!-- Recommendations -->
-				              $if username != 'anonymous':
-				                  <a href='' class='recommend' data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-thumbs-up"></span></a><small> <span class="recommendations">43</span> Recommend This</small>
-				                  <a class='success'>+1</a>
-				            </ul>
-
+			                <a href="programinfo?ind=$program['index']">$program['name']</a></h4><address><strong>Neighborhood: West Oakland<br>$program['address']</strong></address><p class="group inner list-group-item-text"> $program['short_desc']</p><br><ul class="list-inline"><li><a href="programinfo.html"><span class="glyphicon glyphicon-usd"></span> Price: </a></li></ul><span class="glyphicon glyphicon-thumbs-up"><small> 43 Recommend This</small></span></li>
 			        </ol><!-- end ordered list-->
-			    $else:
-			    	<h1 class='empty'>You haven't saved any programs yet. <a href='/'>Browse programs</a>.</h1>
 			    </div><!-- program results -->
 			</div>
 		</div>

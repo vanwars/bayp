@@ -15,7 +15,7 @@ def whoosh_descriptions(programs):
                     address=TEXT(stored=True), \
                     category=TEXT(stored=True), \
                     zipcode=TEXT(stored=True), \
-                    short_desc=TEXT(stored=True, analyzer=(StandardAnalyzer(minsize=2) | NgramFilter(minsize=3))))
+                    school=TEXT(stored=True, analyzer=(StandardAnalyzer(minsize=2) | NgramFilter(minsize=3))))
     index = create_in("whooshindex", schema)
     writer = index.writer()
     
@@ -30,7 +30,7 @@ def whoosh_descriptions(programs):
                             address=program["address"], \
                             category=program["categories"], \
                             zipcode=unicode(program["zipcode"]), \
-                            short_desc=program["short_desc"])
+                            school=program["school"])
     writer.commit()
     
     return index
