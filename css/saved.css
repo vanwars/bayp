@@ -1,3 +1,4 @@
+/*Saved Page*/
 .saved h4 {
   color: #838383;
 }
@@ -6,6 +7,19 @@
   color: #000;
   padding: 5px;
 }
+
+
+/*Saving Interactions*/
+
+.recommend {
+	color:#428bca;
+	cursor: pointer;
+}
+
+.recommend:hover {
+	color:#2a6496;
+}
+
 
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: @screen-md-min) {

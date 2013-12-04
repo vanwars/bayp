@@ -1,4 +1,4 @@
-// $('#myModal').modal(options);
+$('#myModal').modal(options);
 
 $('li.success').hide();
 

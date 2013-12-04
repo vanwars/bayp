@@ -111,7 +111,7 @@ class listview:
                     except IndexError:
                         continue
                 
-            return render.listview(render.header(session.user), render.footer(), results, filtered_backups, category, zipcode, session, programs)
+            return render.listview(render.header(session.user), render.footer(), results, filtered_backups, category, zipcode, session.user, programs, render.not_logged_in())
 
 class about:
     def GET(self):
