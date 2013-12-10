@@ -1,3 +1,8 @@
+import os, sys
+curdir = os.path.dirname(__file__)
+os.chdir(curdir)
+sys.path.append(curdir)
+
 import web
 import program_reader
 import tempfile
@@ -24,7 +29,7 @@ search_index = program_reader.whoosh_descriptions(programs)
 app = web.application(urls, globals())
 
 if web.config.get('_session') is None:
-    session = web.session.Session(app, web.session.DiskStore('sessions'), initializer={'user': 'anonymous'})
+    session = web.session.Session(app, web.session.DiskStore(os.path.join(curdir, 'sessions')), initializer={'user': 'anonymous'})
     web.config._session = session
 else:
     session = web.config._session
@@ -179,13 +184,15 @@ class profile:
 class static:
     def GET(self, media, file):
         try:
-            f = open(media+'/'+file, 'r')
+            f = open(os.path.join(curdir, media+'/'+file), 'r')
             val = f.read()
             f.close()
             return val
 
         except:
             return '' # you can send a 404 error here if you want
+
+application = app.wsgifunc()
 
 if __name__ == "__main__":
     app.run()
