@@ -1,6 +1,7 @@
 import os, sys
 curdir = os.path.dirname(__file__)
-os.chdir(curdir)
+if curdir != '':
+    os.chdir(curdir)
 sys.path.append(curdir)
 
 import web
@@ -94,7 +95,7 @@ class listview:
                     query = QueryParser("school", search_index.schema).parse(""+zipcode)
                 else:
                     print "reaching HERE"
-                    query = QueryParser("school", search_index.schema).parse("category:"+category+" "+zipcode)
+                    query = QueryParser("school", search_index.schema).parse("category:'"+category+"' "+zipcode)
                 print "query: ", ""+zipcode+" category:"+category
                 
             results = searcher.search(query)
