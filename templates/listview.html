@@ -1,4 +1,4 @@
-$def with (header, footer, programs, backup_programs, category, zipcode, session, all_programs, not_logged_in)
+$def with (header, footer, programs, backup_programs, category, zipcode, session, all_programs, not_logged_in, search_type)
 $:header
 
 <script>
@@ -11,7 +11,11 @@ function favorite(id) {
 <div class="container listview">
   <div class="row">
     <div class="col-xs-12 col-md-12">
-        <h4><span class='label'>$category</span> programs in <span class='label'>$zipcode</span>.</h4>
+      $if search_type == 'zip':
+          <h4><span class='label'>$category</span> programs in <span class='label'>$zipcode</span>.</h4>
+      $else:
+          <h4><span class='label'>$category</span> programs near schools named:  <span class='label'>$zipcode</span>.</h4>
+
     </div><!--program category and zip code header -->
   </div><!-- row -->
  <div style="background-color: #F7F7F7; padding-top: 15px;">
@@ -71,7 +75,7 @@ function favorite(id) {
 <div class="container listview">
   <div class="row">
     <div class="col-xs-12 col-md-12">
-        <h4>Other programs that may be related to your search.</h4>
+        <h4>No results from your search.  Other programs that may be related:</h4>
     </div><!--program category and zip code header -->
   </div><!-- row -->
  <div style="background-color: #F7F7F7; padding-top: 15px;">

@@ -68,6 +68,7 @@ class listview:
         category = unicode(web.input()['cat'])
         results = None
         backup_results = None
+        search_type = "zip"
         with search_index.searcher() as searcher:
             backup_query = QueryParser("category", search_index.schema).parse(category)
         
@@ -91,6 +92,7 @@ class listview:
                 print "query: ", "zipcode:"+zipcode+" "+category
             except ValueError:
                 print "found a school query"
+                search_type = "cat"
                 if category == "":
                     query = QueryParser("school", search_index.schema).parse(""+zipcode)
                 else:
@@ -117,7 +119,7 @@ class listview:
                     except IndexError:
                         continue
                 
-            return render.listview(render.header(session.user), render.footer(), results, filtered_backups, category, zipcode, session.user, programs, render.not_logged_in())
+            return render.listview(render.header(session.user), render.footer(), results, filtered_backups, category, zipcode, session.user, programs, render.not_logged_in(), search_type)
 
 class about:
     def GET(self):
