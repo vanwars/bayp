@@ -6,8 +6,10 @@ REQUIREMENTS TO RUN:
 ----------------------
 
 Install these python packages:
-web
-whoosh
+- web
+- whoosh
+
+Create a top-level empty directory called "whooshindex" in the bayp directory. 
 
 
 landing (index)
