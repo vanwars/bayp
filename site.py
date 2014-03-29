@@ -132,7 +132,7 @@ class contact:
         return render.contact(render.header(session.user), render.footer())
 
 # User capabilities
-users = {'robert' : 'password', 'ayana' : 'password'}
+users = {'robert' : 'password', 'ayana' : 'password', 'vanwars': '12345'}
 
 class login:
     def GET(self):
